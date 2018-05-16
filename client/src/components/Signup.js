@@ -112,7 +112,9 @@ class Signup extends Component {
               type="text"
               id="zipcode"
               onChange={this.handleChange} />
-            <button className="btn btn-primary" onClick={this.getZipcode}>Auto-Detect</button>
+
+
+          <button className="btn btn-primary" onClick={this.getZipcode}>Auto-Detect</button>
           </div>
           <button type="submit" className="btn btn-success">Submit</button>
         </form>
