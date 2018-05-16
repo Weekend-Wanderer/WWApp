@@ -26,6 +26,14 @@ let UserSchema = new Schema({
     type: String,
     required: true
   },
+  lat: {
+    type: String,
+    required: true
+  },
+  lng: {
+    type: String,
+    required: true
+  },
   createdAt: {
     type: Date,
     default: Date.now
