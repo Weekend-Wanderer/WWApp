@@ -12,7 +12,7 @@ class Stay extends Component {
     }
     render() {
         return (
-        <h1>Hello World</h1>
+        <h1>Hello World, Let's Stay!</h1>
         )}
 }
 export default Stay;
