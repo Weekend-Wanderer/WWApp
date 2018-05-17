@@ -9,6 +9,8 @@ const app = express();
 const db = require('./models');
 const PORT = process.env.PORT || 3001;
 const axios = require("axios");
+const router = require("./controllers/YelpController");
+
 
 // Setting CORS so that any website can
 // Access our API
@@ -43,7 +45,8 @@ app.get("/api/zipconverter/:zip", function (req, res){
   
   });
 })
-
+//API Access Routes
+app.use(router);
 // LOGIN ROUTE
 app.post('/api/login', (req, res) => {
   db.User.findOne({
