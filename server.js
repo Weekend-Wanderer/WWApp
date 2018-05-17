@@ -9,7 +9,7 @@ const app = express();
 const db = require('./models');
 const PORT = process.env.PORT || 3001;
 const axios = require("axios");
-const router = require("./controllers/YelpController");
+const router = require("./routes/api-routes");
 
 
 // Setting CORS so that any website can
