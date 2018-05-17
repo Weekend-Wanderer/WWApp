@@ -9,8 +9,9 @@ const app = express();
 const db = require('./models');
 const PORT = process.env.PORT || 3001;
 const axios = require("axios");
-const router = require("./controllers/YelpController");
 const flightController = require("./controllers/FlightController");
+const router = require("./routes/api-routes");
+
 
 // Setting CORS so that any website can
 // Access our API
@@ -42,16 +43,7 @@ app.get("/api/flights/:arriving/:departing", function(req,res){
   })
 });
 
-app.get("/api/zipconverter/:zip", function (req, res){
-  const ZIPCODEAPI = "8PKYlTgtwIAUgkLduEsxGLurXX1iPSw5snpMOQ0GWbhIG4S5f8m9Je7cqWj9SLsR";
-  const zipcode = req.params.zip;
-  
-  axios.get(`http://www.zipcodeapi.com/rest/${ZIPCODEAPI}/multi-info.json/${zipcode}/degrees`).then(function (data) {
-    const b = data.data;
-    res.json(b);
-  
-  });
-})
+
 //API Access Routes
 app.use(router);
 // LOGIN ROUTE
