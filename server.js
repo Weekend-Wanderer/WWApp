@@ -10,7 +10,7 @@ const db = require('./models');
 const PORT = process.env.PORT || 3001;
 const axios = require("axios");
 const router = require("./controllers/YelpController");
-
+const flightController = require("./controllers/FlightController");
 
 // Setting CORS so that any website can
 // Access our API
@@ -34,6 +34,13 @@ const isAuthenticated = exjwt({
   secret: 'all sorts of code up in here'
 });
 
+app.get("/api/flights/:arriving/:departing", function(req,res){
+  
+  // res.json({"hello": "hello"});
+  flightController.getFlights(req.params.arriving, req.params.departing, function(data){
+    res.json(data);
+  })
+});
 
 app.get("/api/zipconverter/:zip", function (req, res){
   const ZIPCODEAPI = "8PKYlTgtwIAUgkLduEsxGLurXX1iPSw5snpMOQ0GWbhIG4S5f8m9Je7cqWj9SLsR";
