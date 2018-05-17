@@ -9,6 +9,7 @@ const app = express();
 const db = require('./models');
 const PORT = process.env.PORT || 3001;
 const axios = require("axios");
+const flightController = require("./controllers/FlightController");
 const router = require("./routes/api-routes");
 
 
@@ -34,6 +35,13 @@ const isAuthenticated = exjwt({
   secret: 'all sorts of code up in here'
 });
 
+app.get("/api/flights/:arriving/:departing", function(req,res){
+  
+  // res.json({"hello": "hello"});
+  flightController.getFlights(req.params.arriving, req.params.departing, function(data){
+    res.json(data);
+  })
+});
 
 
 //API Access Routes
