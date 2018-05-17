@@ -1,14 +1,12 @@
-const express = require("express");
-const router = express.Router();
+const axios = require("axios");
 
 
-axios.get("/api/zipconverter/:zip", function (req, res){
+module.exports = function (zip, cb) {
     const ZIPCODEAPI = "8PKYlTgtwIAUgkLduEsxGLurXX1iPSw5snpMOQ0GWbhIG4S5f8m9Je7cqWj9SLsR";
-    const zipcode = req.params.zip;
-    
-    axios.get(`http://www.zipcodeapi.com/rest/${ZIPCODEAPI}/multi-info.json/${zipcode}/degrees`).then(function (data) {
-      const b = data.data;
-      res.json(b);
-    
+
+    axios.get(`http://www.zipcodeapi.com/rest/${ZIPCODEAPI}/multi-info.json/${zip}/degrees`).then(function (data) {
+        const b = data.data;
+        cb(b);
+
     });
-  })
+}
