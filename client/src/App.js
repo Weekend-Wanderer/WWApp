@@ -29,10 +29,12 @@ class App extends Component {
   };
 
   render() {
+    console.log(this.props.user)
     return (
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+          {/* <pre>{this.props.user}</pre> */}
           <h2>Welcome {this.props.user.email}</h2>
         </div>
         <p className="App-intro">
