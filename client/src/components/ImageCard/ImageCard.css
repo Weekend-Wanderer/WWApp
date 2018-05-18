@@ -1,0 +1,33 @@
+.card-image {
+  background: #fff;
+  border-radius: 2px;
+  height: 225px;
+  margin: 1rem;
+  position: relative;
+  width: 225px;
+  text-align: left;
+}
+
+.card-image > .img-container {
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  background:#6CADDC;
+}
+.card-image > .img-container > img {
+  height: auto;
+  width: 100%;
+}
+
+.card-image:hover {
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  height: 226px;
+  width: 226px;
+}
+iframe {
+  position: absolute; 
+  top: 0px; 
+  bottom: 0px; 
+  left: 0px; 
+  right: 0px;}
+
