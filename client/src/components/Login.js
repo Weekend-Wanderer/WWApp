@@ -19,9 +19,10 @@ class Login extends Component {
 
     this.Auth.login(this.state.email, this.state.password)
       .then(res => {
+        console.log(res);
         // once user is logged in
         // take them to their profile page
-        this.props.history.replace(`/profile/${res.data.user._id}`);
+        this.props.history.replace(`/profile/${res.data.user._id}/stay`);
       })
       .catch(err => alert(err));
   };

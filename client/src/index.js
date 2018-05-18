@@ -23,7 +23,8 @@ ReactDOM.render(
             <Route exact path="/" component={App} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
-            <Route exact path="/profile/:id" component={Profile} />
+            <Route exact path="/profile/:id/stay" component={Stay} />
+            <Route exact path="/profile/:id/go" component={Go} />
             <Route exact path="/stay" component={Stay} />
             <Route exact path="/go" component={Go} />
         </div>
