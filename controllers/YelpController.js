@@ -1,5 +1,5 @@
 const yelp = require('yelp-fusion');
-const client = yelp.client("D8cX5oZx77c-eDtSQ3azibBQ-9Hxja6-AGJasBnodqgJfJ5sHAaUBzZWoKp1epqANaWwopf9l_Er0D6IaRTZruXgcUZwFRER47NAObo6KEC2j-xLk0I8M5QTUUPhWnYx");
+const client = yelp.client(process.env.YELP_CLIENT);
 
 
 module.exports = function (event, zip, cb) {
