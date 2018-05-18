@@ -1,0 +1,52 @@
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+  }
+  
+  .App-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+  }
+  
+  .App-intro {
+    font-size: large;
+  }
+  
+  @keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  .go-button{
+    width: 50%;
+    height: 500px;
+    text-align: center;
+    font-size: 90px;
+    color: white;
+    background-color: red;
+    float: right;
+  }
+  .go-button button{
+    font-size: 90px;
+    background-color: red;
+  }
+
+  .stay-button{
+    width: 50%;
+    height: 500px;
+    text-align: center;
+    font-size: 90px;
+    color: white;
+    background-color: blue;
+    float: left;
+  }
+  .stay-button button{
+    font-size: 90px;
+    background-color: blue;
+  }

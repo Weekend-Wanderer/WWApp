@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from "axios";
 import API from '../utils/API';
-import withAuth from './withAuth';
-import ImageCard from "./ImageCard";
+import withAuth from '../components/withAuth';
+import ImageCard from "../components/ImageCard";
 
 class Stay extends Component {
     state = {

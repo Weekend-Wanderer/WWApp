@@ -6,7 +6,7 @@ const ImageCard = props => {
   return (
   <div className="card card-image">
     <div className="img-container">
-      <p>{props.title}</p>
+      <p className="card-title">{props.title}</p>
     
       <iframe src={snapMap} width="100%" height="50%" frameborder="0"></iframe>
     </div>
