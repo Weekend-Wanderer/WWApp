@@ -1,16 +1,12 @@
-var db = require("../models");
-var request = require("request");
+const axios = require("axios");
 
 var meetupcontroller = {
     getMeetupDataById: function (key, group_url, activity_id, cb) { 
         var url =
       `https://api.meetup.com/${group_url}/events/${activity_id}?photo-host=public` +
       `&key=${key}`
-    request({
-      uri: url,
-      method: 'GET'
-    }, function (err, body) {
-      var b = JSON.parse(body.body);
+      axios.get(url, function (data) {
+      var b = JSON.parse(data.data);
       var data = [];
           if (b.venue) {
             var thisR = {
@@ -71,11 +67,8 @@ var meetupcontroller = {
       `&lat=${lat}` +
       `&key=${key}`
     
-      request({
-      uri: url,
-      method: 'GET'
-    }, function (err, body) {
-      var b = JSON.parse(body.body);
+      axios.get(uri, function (data) {
+      var b = JSON.parse(data.data);
       var data = [];
       for (var i = 0; i < b.events.length; i++) {
         if (b.events[i].local_date) {
