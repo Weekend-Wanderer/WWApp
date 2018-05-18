@@ -9,9 +9,12 @@ const app = express();
 const db = require('./models');
 const PORT = process.env.PORT || 3001;
 const axios = require("axios");
-const flightController = require("./controllers/FlightController");
 const router = require("./routes/api-routes");
 
+
+const isAuthenticated = exjwt({
+  secret: 'all sorts of code up in here'
+});
 
 // Setting CORS so that any website can
 // Access our API
@@ -30,23 +33,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/appDB');
 
-// Init the express-jwt middleware
-const isAuthenticated = exjwt({
-  secret: 'all sorts of code up in here'
-});
-
-app.get("/api/flights/:arriving/:departing", function(req,res){
-  
-  // res.json({"hello": "hello"});
-  flightController.getFlights(req.params.arriving, req.params.departing, function(data){
-    res.json(data);
-  })
-});
-
 
 //API Access Routes
 app.use(router);
-// LOGIN ROUTE
+
+//LOGIN ROUTE
 app.post('/api/login', (req, res) => {
   db.User.findOne({
     email: req.body.email
@@ -62,7 +53,7 @@ app.post('/api/login', (req, res) => {
   }).catch(err => res.status(404).json({ success: false, message: "User not found", error: err }));
 });
 
-// SIGNUP ROUTE
+//SIGNUP ROUTE
 app.post('/api/signup', (req, res) => {
   db.User.create(req.body)
     .then(data => res.json(data))
