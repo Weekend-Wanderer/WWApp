@@ -38,14 +38,14 @@ class Home extends Component {
     console.log(this.props.user)
     return (
       <div className="App">
-        <div className="App-header">
+        {/* <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome {this.props.user.email}</h2>
           <p className="App-intro">
           <button type="button" className="btn btn-primary" onClick={this.goToEditProfile}>Go to Profile</button>
           <button type="button" className="btn btn-danger" onClick={this.handleLogout}>Logout</button>
         </p>
-        </div>
+        </div> */}
         <StayButton />
         <GoButton />
         <Alert bsStyle="warning">

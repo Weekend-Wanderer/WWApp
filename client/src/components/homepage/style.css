@@ -22,12 +22,13 @@
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
   }
-  
+
   .go-button{
     width: 50%;
-    height: 500px;
+    height: 800px;
     text-align: center;
     font-size: 90px;
+    padding-top: 300px;
     color: white;
     background-color: red;
     float: right;
@@ -39,8 +40,9 @@
 
   .stay-button{
     width: 50%;
-    height: 500px;
+    height: 800px;
     text-align: center;
+    padding-top: 300px;
     font-size: 90px;
     color: white;
     background-color: blue;
