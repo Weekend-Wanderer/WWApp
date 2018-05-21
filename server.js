@@ -13,6 +13,7 @@ const axios = require("axios");
 const router = require("./routes/api-routes");
 
 
+
 const isAuthenticated = exjwt({
   secret: 'all sorts of code up in here'
 });
