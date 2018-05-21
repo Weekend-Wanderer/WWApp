@@ -9,9 +9,9 @@ class Login extends Component {
   }
 
   componentWillMount() {
-    if (this.Auth.loggedIn()) {
-      this.props.history.replace('/');
-    }
+    // if (this.Auth.loggedIn()) {
+    //   this.props.history.replace('/');
+    // }
   }
 
   handleFormSubmit = event => {
@@ -22,9 +22,10 @@ class Login extends Component {
         console.log(res);
         // once user is logged in
         // take them to their profile page
-        this.props.history.replace(`/profile/${res.data.user._id}/stay`);
+        this.props.history.replace(`/home`);  
       })
       .catch(err => alert(err));
+      
   };
 
   handleChange = event => {
