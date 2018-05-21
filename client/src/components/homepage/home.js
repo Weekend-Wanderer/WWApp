@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from '../../logo.svg';
 import '../../components/homepage/style.css';
 import GoButton from '../homepage/gobutton';
+import { Alert } from 'react-bootstrap';
 
 import StayButton from '../homepage/staybutton';
 
@@ -47,7 +48,10 @@ class Home extends Component {
         </div> */}
         <StayButton />
         <GoButton />
-     
+        <Alert bsStyle="warning">
+          <strong>Holy guacamole!</strong> Best check yo self, you're not looking too
+          good.
+        </Alert>;
       </div>
     );
   }

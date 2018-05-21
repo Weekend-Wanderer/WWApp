@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -11,6 +11,7 @@ const db = require('./models');
 const PORT = process.env.PORT || 3001;
 const axios = require("axios");
 const router = require("./routes/api-routes");
+
 
 
 const isAuthenticated = exjwt({
