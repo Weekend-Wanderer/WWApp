@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 const morgan = require('morgan'); // used to see requests
 const app = express();
 const db = require('./models');
-const PORT = process.env.PORT || 3001;
+let PORT = process.env.PORT || 3001;
 const axios = require("axios");
 const router = require("./routes/api-routes");
 
@@ -46,7 +46,7 @@ app.post('/api/login', (req, res) => {
   }).then(user => {
     user.verifyPassword(req.body.password, (err, isMatch) => {
       if (isMatch && !err) {
-        let token = jwt.sign({ id: user._id, email: user.email, name: user.username, password: user.password }, 'all sorts of code up in here', { expiresIn: 129600 }); // Sigining the token
+        let token = jwt.sign({ id: user._id, email: user.email, name: user.username, zipcode: user.zipcode, lng: user.lng, lat: user.lat }, 'all sorts of code up in here', { expiresIn: 129600 }); // Sigining the token
         res.json({ success: true, message: "Token Issued!", token: token, user: user });
       } else {
         res.status(401).json({ success: false, message: "Authentication failed. Wrong password." });
