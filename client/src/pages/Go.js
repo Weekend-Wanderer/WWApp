@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from "axios";
+import GoPage from "../components/gopage";
 
-
-class Stay extends Component {
-    
+class Go extends Component {
+    state = {
+        myzipcode: 92109
+    }
     componentDidMount() {
-        axios.post("/api/yelp/92109").then(function (data) {
-            console.log(data);
-        })
+      
     }
     render() {
         return (
-        <h1>Hello World, Let's GO!</h1>
+        <div>
+        <GoPage />
+        </div>
         )}
 }
-export default Stay;
+export default Go;
