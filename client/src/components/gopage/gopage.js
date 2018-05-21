@@ -41,7 +41,7 @@ class Home extends Component {
     handleMeetup = () =>{
         var thethis = this;
         if(this.state.myzipcode!==""){
-            axios.post("/api/meetup/").then(function (data) {
+            axios.post("/api/meetup/" + this.state.myzipcode).then(function (data) {
                 console.log(data.data);
                 thethis.setState({
                     meetup: data.data
