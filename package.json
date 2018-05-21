@@ -29,6 +29,7 @@
     "jsonwebtoken": "^8.2.1",
     "mongoose": "^5.1.0",
     "morgan": "^1.9.0",
+    "react-bootstrap": "^0.32.1",
     "yelp-fusion": "^2.0.3"
   }
 }
