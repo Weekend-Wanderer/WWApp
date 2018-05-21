@@ -55,7 +55,7 @@ var meetupcontroller = {
         });
 
     },
-    getMeetupData: function (key, page, text,radius,lng,lat,key, cb) { 
+    getMeetupData: function (key, page, text,radius,lng,lat, cb) { 
         ///get meetup data:
 
         var url =
@@ -66,9 +66,10 @@ var meetupcontroller = {
       `&lon=${lng}` +
       `&lat=${lat}` +
       `&key=${key}`
-    
-      axios.get(uri, function (data) {
-      var b = JSON.parse(data.data);
+    console.log(url);
+      axios.get(url)
+      .then(function (data1) {
+      var b = data1.data;
       var data = [];
       for (var i = 0; i < b.events.length; i++) {
         if (b.events[i].local_date) {
@@ -121,7 +122,8 @@ var meetupcontroller = {
         }
       }
         cb(data);
-    });
+    })
+    .catch(err=> console.log(err));
     
     }
 }

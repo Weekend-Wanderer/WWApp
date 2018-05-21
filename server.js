@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -90,7 +91,7 @@ app.use(function (err, req, res, next) {
   }
   else {
     next(err);
-  }
+  } 
 });
 
 // Send every request to the React app
@@ -99,6 +100,7 @@ app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-app.listen(PORT, function () {
+app.listen(PORT, function (err) {
+  if(err) console.log(err); //save
   console.log(`🌎 ==> Server now on port ${PORT}!`);
 });
