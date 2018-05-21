@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import AuthService from '../components/AuthService';
 import API from '../utils/API';
 import axios from "axios";
+
+
 class Signup extends Component {
   constructor() {
     super();
@@ -73,7 +75,6 @@ class Signup extends Component {
   render() {
     return (
       <div className="container">
-
         <h1>Signup</h1>
         <form onSubmit={this.handleFormSubmit}>
           <div className="form-group">

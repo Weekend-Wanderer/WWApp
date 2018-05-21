@@ -14,6 +14,7 @@ import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Stay from "./pages/Stay";
 import Go from "./pages/Go";
+import NewHome from "./pages/NewHome";
 
 if(localStorage.getItem("id_token")) {
   axios.defaults.headers.common['Authorization'] = `Bearer ${localStorage.getItem('id_token')}`;
@@ -21,7 +22,8 @@ if(localStorage.getItem("id_token")) {
 ReactDOM.render(
     <Router>
         <div>
-            <Route exact path="/" component={Home} />
+            <Route exact path="/" component={NewHome} />
+            <Route exact path="/home" component={Home} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/profile/:id/stay" component={Stay} />

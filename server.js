@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 const morgan = require('morgan'); // used to see requests
 const app = express();
 const db = require('./models');
-const PORT = process.env.PORT || 3001;
+let PORT = process.env.PORT || 3001;
 const axios = require("axios");
 const router = require("./routes/api-routes");
 
