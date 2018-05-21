@@ -14,7 +14,7 @@ const Auth = new AuthService();
 class Home extends Component {
 
   state = {
-    userId: this.props.user.id,
+    // userId: this.props.user.id,
     profileLink: ""
   };
 
@@ -57,4 +57,4 @@ class Home extends Component {
   }
 }
 
-export default withAuth(Home);
+export default Home;
