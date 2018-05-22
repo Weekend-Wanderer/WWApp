@@ -28,7 +28,7 @@ router.get("/api/flights/:arriving/:departing", function(req,res){
 });
 
 router.get("/api/flightsthisweek/:arriving/:departing", function(req,res){
-    FlightController.getFlights(req.params.arriving, req.params.departing, function(data){
+    FlightController.getFlightsByThisWeekend(req.params.arriving, req.params.departing, function(data){
       res.json(data);
     })
 });
