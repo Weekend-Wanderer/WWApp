@@ -4,12 +4,16 @@ import '../components/gotopage/style.css';
 // import GoButton from '../homepage/gobutton';
 import { Alert, Navbar,FormGroup,FormControl,Button, Well } from 'react-bootstrap';
 import { Grid, Row, Col } from 'react-bootstrap';
+
 // import StayButton from '../homepage/staybutton';
 import AuthService from '../components/AuthService';
 import withAuth from '../components/withAuth';
 import axios from "axios";
 import {SearchZip} from "../components/gotopage";
 import {Wrapper} from "../components/Wrapper";
+import {YelpResturantCard} from "../components/YelpResturantCard";
+import {MeetupEventCard} from "../components/MeetupEventCard";
+import SnapMapGoTo from "../components/SnapMapGoTo";
 
 const Auth = new AuthService();
 
@@ -22,8 +26,7 @@ class GoTo extends Component {
         lat: "",
         lng: "",
         meetup: [],
-        yelp: [],
-        flight:[]
+        yelp: []
     };
 
     componentDidMount() {
@@ -38,26 +41,14 @@ class GoTo extends Component {
         
     }
     handleAPIS = ()=>{
-        this.handleFlight();
         this.handleYelp();
         this.handleMeetup();
-    }
-    handleFlight = () =>{
-        var thethis = this;
-        if(this.state.myzipcode!==""){
-            axios.get("/api/flightsthisweek/LAX/DBX").then(function (data) {
-                // console.log(data.data);
-                thethis.setState({
-                    flight: data.data
-                });
-            })
-        }
     }
     handleMeetup = () =>{
         var thethis = this;
         if(this.state.myzipcode!==""){
             axios.post("/api/meetup/" + this.state.myzipcode).then(function (data) {
-                // console.log(data.data);
+                console.log(data.data);
                 thethis.setState({
                     meetup: data.data
                 });
@@ -68,7 +59,7 @@ class GoTo extends Component {
         var thethis = this;
         if(this.state.myzipcode!==""){
             axios.post("/api/yelp/" + this.state.myzipcode).then(function (data) {
-                // console.log(data.data);
+                console.log(data.data);
                 thethis.setState({
                     yelp: data.data
                 });
@@ -91,17 +82,28 @@ class GoTo extends Component {
     };
 
     render() {
+        console.log(this.state.meetup);
         return (
             <Wrapper>
-                <h1>GO!</h1>
+            <h1>GO To!</h1>
                 <SearchZip searchzipcode={this.state.myzipcode} buttonhandle={this.handleAPIS} handleinput={this.handleinput}/>
-<div>
-                <Well bsSize="large">{JSON.stringify(this.state.flight)}</Well>
-                <Well bsSize="large">{JSON.stringify(this.state.yelp)}</Well>
-                <Well bsSize="large">{JSON.stringify(this.state.meetup)}</Well>
+                <div>
+                <SnapMapGoTo lat={this.state.lat} lng={this.state.lng}/>
                 </div>
-      </Wrapper>
-        );
+                <div>
+                <Row>
+                    <Col>
+                {this.state.yelp.map(ylp=>(<YelpResturantCard title={ylp.name} price={ylp.price} rating={ylp.rating} image_url={ylp.image_url} />))}
+                    </Col>
+                </Row>
+                <Row>
+                    <Col>    
+                {this.state.meetup.map(meet=>(<MeetupEventCard name={meet.name} local_date={meet.local_date} local_time={meet.local_time} link={meet.link}  group_address={meet.group_address} />))}
+                    </Col>
+                </Row>    
+        
+                </div>
+            </Wrapper>);
     }
 }
 

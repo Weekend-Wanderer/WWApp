@@ -14,6 +14,7 @@ import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Stay from "./pages/Stay";
 import Go from "./pages/Go";
+import GoTo from "./pages/GoTo";
 import NewHome from "./pages/NewHome";
 
 if(localStorage.getItem("id_token")) {
@@ -30,6 +31,7 @@ ReactDOM.render(
             <Route exact path="/profile/:id/go" component={Go} />
             <Route exact path="/stay" component={Stay} />
             <Route exact path="/go" component={Go} />
+            <Route exact path="/goto" component={GoTo} />
         </div>
     </Router>
     , document.getElementById('root')
