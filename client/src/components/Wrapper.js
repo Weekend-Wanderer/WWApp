@@ -15,4 +15,4 @@ render(){
 }
 }
 
-export {Wrapper} ;
+export {Wrapper};

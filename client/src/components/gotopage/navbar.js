@@ -16,7 +16,7 @@ class SearchZip extends Component {
                             <FormGroup>
                                 <FormControl type="text" onChange={this.props.handleinput} placeholder="Search Zipcode" value={this.props.searchzipcode} />
                             </FormGroup>{' '}
-                            <Button type="submit" onClick={this.props.buttonhandle}>Search Zipcode</Button>
+                            <Button type="submit" onClick={(event)=>this.props.buttonhandle(event)}>Search Zipcode</Button>
                         </Navbar.Form>
                     </Navbar.Collapse>
                 </Navbar>
