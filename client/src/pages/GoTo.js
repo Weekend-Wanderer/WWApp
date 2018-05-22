@@ -21,7 +21,7 @@ class GoTo extends Component {
 
     state = {
         // userId: this.props.user.id,
-        myzipcode: "--",
+        myzipcode: "",
         profileLink: "",
         lat: "",
         lng: "",
@@ -45,15 +45,18 @@ class GoTo extends Component {
         this.handleYelp();
         this.handleMeetup();
         
+        
     }
     handleZip = () =>{
         var thethis = this;
+        console.log("prev:" + this.state.myzipcode);
         if(this.state.myzipcode!==""){
-            axios.post("/api/zip/" + this.state.myzipcode).then(function (data) {
+            axios.get("/api/zipconverter/" + this.state.myzipcode)
+            .then(function (data) {
                 console.log(data.data);
                 thethis.setState({
-                    lat: data.data.lat,
-                    lng: data.data.lng
+                    lat: data.data[thethis.state.myzipcode].lat,
+                    lng: data.data[thethis.state.myzipcode].lng
                 });
             })
         }
@@ -81,7 +84,8 @@ class GoTo extends Component {
         }
     }
     handleinput = (event) =>{
-        var value = event.value;
+        var value = event.target.value;
+
         this.setState({
             myzipcode: value
         })
@@ -96,11 +100,11 @@ class GoTo extends Component {
     };
 
     render() {
-        console.log(this.state.meetup);
+        console.log(this.state.myzipcode);
         return (
             <Wrapper>
             <h1>GO To!</h1>
-                <SearchZip searchzipcode={this.state.myzipcode} buttonhandle={this.handleAPIS} handleinput={this.handleinput}/>
+                <SearchZip searchzipcode={this.state.myzipcode} buttonhandle={this.handleAPIS} handleinput={(event)=>this.handleinput(event)}/>
                 <div>
                 <SnapMapGoTo lat={this.state.lat} lng={this.state.lng}/>
                 </div>
