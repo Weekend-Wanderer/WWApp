@@ -29,13 +29,13 @@
     text-align: center;
     font-size: 90px;
     padding-top: 300px;
-    color: white;
-    background-color: red;
+    color: black;
+    background-color: white;
     float: right;
   }
   .go-button button{
     font-size: 90px;
-    background-color: red;
+    background-color: white;
   }
 
   .stay-button{
@@ -45,10 +45,10 @@
     padding-top: 300px;
     font-size: 90px;
     color: white;
-    background-color: blue;
+    background-color: black;
     float: left;
   }
   .stay-button button{
     font-size: 90px;
-    background-color: blue;
+    background-color: black;
   }
