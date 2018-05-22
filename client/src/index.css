@@ -7,3 +7,15 @@ body {
   padding: 0;
   font-family: 'Poppins', sans-serif;
 }
+
+.title-header {
+  text-align: center;
+  color: black;
+}
+
+.main-logo {
+  height: 200px;
+  width: 250px;
+  margin-left: 575px;
+  z-index: 1000;
+}
