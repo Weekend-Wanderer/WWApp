@@ -1,4 +1,4 @@
-.card-image {
+.card-yelp {
   background: #fff;
   border-radius: 2px;
   height: 150px;
@@ -9,18 +9,18 @@
   float: left;
 }
 
-.card-image > .img-container {
+.card-yelp > .img-container {
   height: 100%;
   overflow: hidden;
   text-align: center;
   background-color: black;
 }
-.card-image > .img-container > img {
+.card-yelp > .img-container > img {
   height: calc(100% - 50px);
   width: auto;
 }
 
-.card-image:hover {
+.card-yelp:hover {
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
   height: 145px;
   width: 145px;
@@ -29,7 +29,7 @@
 }
 
 
-.card-title {
+.card-title-yelp {
   margin-top: 5px; 
   color: white;
 }
