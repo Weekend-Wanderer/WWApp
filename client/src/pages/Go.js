@@ -76,7 +76,7 @@ class GoTo extends Component {
         }
     }
     handleinput = (event) =>{
-        var value = event.value;
+        var value = event.target.value;
         this.setState({
             myzipcode: value
         })
