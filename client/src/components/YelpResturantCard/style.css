@@ -1,0 +1,35 @@
+.card-image {
+  background: #fff;
+  border-radius: 2px;
+  height: 150px;
+  margin: 1rem;
+  position: relative;
+  width: 150px;
+  text-align: left;
+  float: left;
+}
+
+.card-image > .img-container {
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  background-color: black;
+}
+.card-image > .img-container > img {
+  height: calc(100% - 50px);
+  width: auto;
+}
+
+.card-image:hover {
+  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  height: 145px;
+  width: 145px;
+  margin: calc(1rem - 2px);
+
+}
+
+
+.card-title {
+  margin-top: 5px; 
+  color: white;
+}
