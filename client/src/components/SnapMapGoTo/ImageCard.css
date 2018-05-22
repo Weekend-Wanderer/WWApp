@@ -1,0 +1,17 @@
+.card-image-snap {
+  background: #fff;
+  border-radius: 2px;
+  height: 425px;
+
+  position: relative;
+  width: 100%;
+  text-align: left;
+}
+
+
+iframe {
+  position: absolute; 
+  top: 0px; 
+  bottom: 0px; 
+  left: 0px; 
+  right: 0px;}
