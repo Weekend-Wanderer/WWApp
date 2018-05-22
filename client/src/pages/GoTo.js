@@ -41,8 +41,22 @@ class GoTo extends Component {
         
     }
     handleAPIS = ()=>{
+        this.handleZip();
         this.handleYelp();
         this.handleMeetup();
+        
+    }
+    handleZip = () =>{
+        var thethis = this;
+        if(this.state.myzipcode!==""){
+            axios.post("/api/zip/" + this.state.myzipcode).then(function (data) {
+                console.log(data.data);
+                thethis.setState({
+                    lat: data.data.lat,
+                    lng: data.data.lng
+                });
+            })
+        }
     }
     handleMeetup = () =>{
         var thethis = this;
