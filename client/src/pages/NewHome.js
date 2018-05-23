@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Carousel } from 'react-bootstrap';
-import logo from '../WW_logo_active.png';
-import pics from '../islands.jpg';
-import picss from '../travel.jpg'
+import logo from '../imgs/WW_logo_active.png';
+import pics from '../imgs/islands.jpg';
+import picss from '../imgs/travel.jpg';
+import girlTravel from '../imgs/girls-roadtrip.jpg';
 import AuthService from '../components/AuthService';
 import API from '../utils/API';
 import axios from "axios";
@@ -86,13 +87,18 @@ class NewHome extends Component {
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>;
-                
             
+                <div className="container">
+                    <div className="row">
+                        <h1 className="first-message"> Let the Beat Control Your Body</h1>
+                    </div>
+                </div>
+
+{/* add paralax to pics */}
+
+                <img  src={girlTravel} alt="travel-gal"/>
 
                 
-                
-
-
             </div>
         )
     }
