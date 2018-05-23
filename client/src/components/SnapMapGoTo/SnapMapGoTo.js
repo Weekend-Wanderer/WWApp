@@ -24,7 +24,7 @@ componentDidMount() {
       return (
       <div><p>{this.props.lat}, {this.props.lng}</p>
       <div className="card-image-snap">
-      <iframe key={this.state.random} title="snapMap" src={snapMap} width="100%" height="50%" frameborder="0"></iframe>
+      <iframe key={this.state.random} title="snapMap" src={snapMap} width="100%" height="80%" frameborder="0"></iframe>
       </div></div>
     );
  }
