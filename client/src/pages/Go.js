@@ -133,19 +133,30 @@ class GoTo extends Component {
             <Wrapper>
                 <h1>GO!</h1>
                 <SearchZip searchzipcode={this.state.myzipcode} buttonhandle={this.handleAPIS} handleinput={this.handleinput}/>
-<div>               
-
-                
-
+            <div className="parallax">
+            <div className="parallax__group">
+                <div className="parallax__layer parallax__layer--base">
                 {(this.state.flight1[0] && this.state.flight2[0]) ? <FlightCard tflightOne={this.state.flight1} tflightTwo={this.state.flight2} /> : "" }
-                
+                </div>
+
+                <div className="parallax__layer parallax__layer--back">
                 {(this.state.flight3[0] && this.state.flight4[0]) ? <FlightCard tflightOne={this.state.flight3} tflightTwo={this.state.flight4} /> : "" }
-                
+                </div>
+
+                <div className="parallax__layer parallax__layer--fore">
                 {(this.state.flight5[0] && this.state.flight6[0]) ? <FlightCard tflightOne={this.state.flight5} tflightTwo={this.state.flight6} /> : "" }
-                
+                </div>
+
+                <div className="parallax__layer parallax__layer--back">
                 {(this.state.flight7[0] && this.state.flight8[0]) ? <FlightCard tflightOne={this.state.flight7} tflightTwo={this.state.flight8} /> : "" } 
+                </div>
+
+                <div className="parallax__layer parallax__layer--base">
                 {(this.state.flight9[0] && this.state.flight10[0]) ? <FlightCard tflightOne={this.state.flight9} tflightTwo={this.state.flight10} /> : "" } 
                 </div>
+
+            </div>
+            </div>
       </Wrapper>
         );
     }
