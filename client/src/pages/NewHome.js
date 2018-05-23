@@ -7,8 +7,7 @@ import slide2 from '../imgs/B_on_hay.jpg';
 import slide3 from '../imgs/lifeguard.jpg';
 import slide4 from '../imgs/hot-air-balloon.jpg';
 import slide5 from '../imgs/dog-travel.jpg';
-import slide6 from '../imgs/san-diego-skyline.jpg';
-import groupTravel from '../imgs/group-travel.png';
+import demo from '../imgs/iPhone-demo copy.jpg';
 import soloTravel from '../imgs/Millennial-Travel.jpg';
 import girlTravel from '../imgs/girls-roadtrip.jpg';
 import AuthService from '../components/AuthService';
@@ -96,24 +95,15 @@ class NewHome extends Component {
                 <Carousel>
                     <Carousel.Item>
                         <img className="slide1" alt="one" src={slide1} />
-                        <Carousel.Caption>
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                        </Carousel.Caption>
+
                     </Carousel.Item>
                     <Carousel.Item>
                         <img className="slide2" alt="two" src={slide2} />
-                        <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </Carousel.Caption>
+
                     </Carousel.Item>
                     <Carousel.Item>
                         <img className="slide3" alt="three" src={slide3} />
-                        <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </Carousel.Caption>
+
                     </Carousel.Item>
                     <Carousel.Item>
                         <img className="slide4" alt="four" src={slide4} />
@@ -144,7 +134,13 @@ class NewHome extends Component {
                 <div className="parallax__layer parallax__layer--fore">
                 <div className="container">
                     <div className="row">
-                        <h1 className="first-message"> Let the Beat Control Your Body</h1>
+                        <h1 className="message"> 
+                        Choose your path</h1>
+                        <h1>
+                        Let the button decide</h1>
+                        <h2 className="message">
+                        Introducing the easiest way to find great trips
+                        </h2>
                     </div>
                 </div>
                 </div>
@@ -161,15 +157,25 @@ class NewHome extends Component {
                 </div>
                 <div className="container">
                     <div className="row">
-                        <h1 className="second-message"> Let the Beat Control Your Body</h1>
-                    </div>
+                    <h1 className="message"> 
+                    A complete trip in just one tap</h1>
+                        <h2 className="message">
+                        Say goodbye to hours of planning
+                        </h2>
+                        </div>
                 </div>
-                
-                <div className="pic3" src={girlTravel} alt="travel-gal">
-</div>
+
+                <div className="img-container">
+                    <img src={demo} className="pic3" alt="travel-gal" />
+                </div>
+
                 <div className="container">
                     <div className="row">
-                        <h1 className="third-message"> Let the Beat Control Your Body</h1>
+                    <h1 className="message"> 
+                    Meet new people around the world</h1>
+                        <h2 className="message">
+                        making new friends for life!
+                        </h2>             
                     </div>
                 </div>
                 
