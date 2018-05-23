@@ -1,6 +1,8 @@
 .card-image {
   background: #fff;
-  border-radius: 2px;
+  border: solid;
+  border-radius: 7px;
+  border-width: 4px;
   height: 300px;
   margin: 1rem;
   position: relative;
