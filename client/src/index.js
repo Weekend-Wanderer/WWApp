@@ -31,7 +31,7 @@ ReactDOM.render(
             <Route exact path="/profile/:id/go" component={Go} />
             <Route exact path="/stay" component={Stay} />
             <Route exact path="/go" component={Go} />
-            <Route exact path="/goto" component={GoTo} />
+            <Route exact path="/goto/:from/:dest/:zip" component={GoTo} />
         </div>
     </Router>
     , document.getElementById('root')

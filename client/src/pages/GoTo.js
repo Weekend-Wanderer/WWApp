@@ -14,7 +14,7 @@ import {Wrapper} from "../components/Wrapper";
 import {YelpResturantCard} from "../components/YelpResturantCard";
 import {MeetupEventCard} from "../components/MeetupEventCard";
 import SnapMapGoTo from "../components/SnapMapGoTo";
-
+import { Link } from "react-router-dom";
 const Auth = new AuthService();
 
 class GoTo extends Component {
@@ -31,13 +31,28 @@ class GoTo extends Component {
 
     componentDidMount() {
         const profileLinkURL = `/profile/${this.state.userId}`;
+
+        var thethis = this;
+        
+            axios.get("/api/zipconverter/" + this.props.match.params.zip)
+            .then(function (data) {
+                console.log(data.data);
+                thethis.setState({
+                    lat: data.data[thethis.props.match.params.zip].lat,
+                    lng: data.data[thethis.props.match.params.zip].lng
+                });
+            })
         this.setState({
             profileLink: profileLinkURL,
-            myzipcode: this.props.user.zipcode,
-            lat: this.props.user.lat,
-            lng: this.props.user.lng
-        })
-  
+            from: this.props.match.params.from,
+            destination: this.props.match.params.dest,
+            myzipcode: this.props.match.params.zip
+        });
+            thethis = this;
+            setTimeout(function(){ thethis.handleAPIS(); }, 100);
+
+       
+
         
     }
     handleAPIS = ()=>{
@@ -49,7 +64,6 @@ class GoTo extends Component {
     }
     handleZip = () =>{
         var thethis = this;
-        console.log("prev:" + this.state.myzipcode);
         if(this.state.myzipcode!==""){
             axios.get("/api/zipconverter/" + this.state.myzipcode)
             .then(function (data) {
@@ -103,7 +117,7 @@ class GoTo extends Component {
         console.log(this.state.myzipcode);
         return (
             <Wrapper>
-            <h1>GO To!</h1>
+            <h1>GO To! {this.state.destination}</h1>
                 <SearchZip searchzipcode={this.state.myzipcode} buttonhandle={this.handleAPIS} handleinput={(event)=>this.handleinput(event)}/>
                 <div>
                 <SnapMapGoTo lat={this.state.lat} lng={this.state.lng}/>
