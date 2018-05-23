@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Carousel } from 'react-bootstrap';
-import logo from '../WW_logo_active.png';
-import pics from '../islands.jpg';
-import picss from '../travel.jpg'
+import logo from '../imgs/WW_logo_thicc.png';
+import pics from '../imgs/islands.jpg';
+import picss from '../imgs/travel.jpg';
+import girlTravel from '../imgs/girls-roadtrip.jpg';
 import AuthService from '../components/AuthService';
 import API from '../utils/API';
 import axios from "axios";
@@ -22,15 +23,11 @@ class NewHome extends Component {
             this.setState({
                 showLoadingScreen: false
             });
-        }, 5000)
+        }, 6000)
     }
 
     loadingComp = () => {
-        const $triangles = document.querySelectorAll('.triangle')
-
-        // Array.prototype.forEach.call($triangles, ($triangle, index) => {
-        //     $triangle.innerHTML = template
-        // });
+        
         return (
             <div className="triangle-wrapper">
                 <div className="triangle triangle-1">
@@ -119,27 +116,40 @@ class NewHome extends Component {
 
         <Carousel>
                     <Carousel.Item>
-                        <img width={900} height={500} alt="900x500" src={pics} />
+                        <img width={2000} height={768} alt="900x500" src={pics} />
                         <Carousel.Caption>
                             <h3>First slide label</h3>
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img width={900} height={500} alt="900x500" src={picss} />
+                        <img width={2000} height={500} alt="900x500" src={picss} />
                         <Carousel.Caption>
                             <h3>Second slide label</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img width={900} height={500} alt="900x500" src={pics} />
+                        <img width={2000} height={500} alt="900x500" src={pics} />
                         <Carousel.Caption>
                             <h3>Third slide label</h3>
                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
-                </Carousel>
+                </Carousel>;
+            
+                <div className="container">
+                    <div className="row">
+                        <h1 className="first-message"> Let the Beat Control Your Body</h1>
+                    </div>
+                </div>
+
+{/* add paralax to pics */}
+
+                <img  src={girlTravel} alt="travel-gal"/>
+
+                
+                
             </div>
         )
     }
