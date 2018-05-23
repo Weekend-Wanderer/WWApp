@@ -74,9 +74,15 @@ class NewHome extends Component {
 
     mainPageDisplay = () => {
         return (
-            <div>
+            <div className="parallax">
+                <div className="parallax__group">
+                <div className="parallax__layer parallax__layer--fore">
                 <img className="main-logo" src={logo} alt="logo" />
+                </div>
+                <div className="parallax__layer parallax__layer--fore">
                 <h1 className="title-header">Weekend Wanderer</h1>
+                </div>
+                <div className="parallax__layer parallax__layer--fore">
                 <div className="buttons">
                     <Link to="/signup" role="button" className="signup-login-button">
                         Signup
@@ -85,6 +91,8 @@ class NewHome extends Component {
                         Login
                     </Link>
                 </div>
+                </div>
+                <div className="parallax__layer parallax__layer--back">
                 <Carousel>
                     <Carousel.Item>
                         <img className="slide1" alt="one" src={slide1} />
@@ -128,18 +136,26 @@ class NewHome extends Component {
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
-                </Carousel>;
+                </Carousel>
+                </div>
+                </div>
+            <div className="parallax__group">
 
+                <div className="parallax__layer parallax__layer--fore">
                 <div className="container">
                     <div className="row">
                         <h1 className="first-message"> Let the Beat Control Your Body</h1>
                     </div>
                 </div>
-
+                </div>
+                </div>
+                <div className="parallax__group">
                 {/* add paralax to pics */}
-
+                <div className="parallax__layer parallax__layer--fore">
                 <img src={girlTravel} alt="travel-gal" />
-
+                </div>
+                
+            </div>
 
                 <div  className="pic2" src={soloTravel} alt="solo-gal">
                 </div>
@@ -160,7 +176,7 @@ class NewHome extends Component {
                 <div  className="pic4" src={groupTravel} alt="group">
                 </div>
 
-
+            
             </div>
         )
     }
