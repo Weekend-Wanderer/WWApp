@@ -10,15 +10,60 @@ body {
 
 .title-header {
   text-align: center;
-  color: black;
+  font-size: 70px;
+  color: white;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  z-index: 1000;
+  position: absolute;
+  top: 10%;
+  left: 25%;
+  text-shadow: 0 1px 3px #999, 0 1px 3px #999;
 }
 
 .main-logo {
-  height: 200px;
-  width: 250px;
-  margin-left: 575px;
+  height: auto;
+  width: 26%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
   z-index: 1000;
+  position: absolute;
+  top: 30%;
+  left: 37%;
 }
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+.carousel {
+  margin-top: 0px;
+}
+
+.buttons {
+  z-index: 1000;
+  width: 30%;
+  position: absolute;
+  top: 80%;
+  left: 35%;
+}
+
+.signup-login-button {
+  font-size: 24px;
+  width: 50%;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  background: white;
+  padding: 15px;
+  border: solid 0px;
+  border-radius: 5px;
+}
+
+
 
 
 /* Parallax base styles

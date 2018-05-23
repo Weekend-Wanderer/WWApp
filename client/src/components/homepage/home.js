@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from '../../logo.svg';
 import '../../components/homepage/style.css';
 import GoButton from '../homepage/gobutton';
 import { Alert } from 'react-bootstrap';

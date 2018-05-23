@@ -1,3 +1,30 @@
+.pic2, .pic3, .pic4 {
+  height: 400px;
+  width: 100%;
+  background-size: cover;
+  /* background-position: ; */
+}
+
+.pic2 {
+  background-image: url("/client/src/imgs/Millennial-Travel.jpeg");
+
+}
+
+.pic3 {
+  background-image: url("/client/src/imgs/girls-roadtrip.jpg");
+}
+
+.pic4 {
+  background-image: url("/client/src/imgs/group-travel.png");
+}
+
+.slide1, .slide2, .slide3, .slide4, .slide5, .slide6 {
+  width: 1669px;
+  height: 1233px;
+  max-width: 2000px;
+  margin: auto;
+}
+
 .x-loader {
     align-items: center;
     background: #000;
@@ -10,6 +37,7 @@
     left: 0;
 
 }
+
 @keyframes grow-and-fade {
     0% {
       opacity: 0;

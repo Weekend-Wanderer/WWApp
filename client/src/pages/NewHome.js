@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Carousel } from 'react-bootstrap';
-import logo from '../WW_logo_active.png';
-import pics from '../islands.jpg';
-import picss from '../travel.jpg'
+import logo from '../imgs/WW_logo_thicc.png';
+import slide1 from '../imgs/islands.jpg';
+import slide2 from '../imgs/B_on_hay.jpg';
+import slide3 from '../imgs/lifeguard.jpg';
+import slide4 from '../imgs/hot-air-balloon.jpg';
+import slide5 from '../imgs/dog-travel.jpg';
+import slide6 from '../imgs/san-diego-skyline.jpg';
+import groupTravel from '../imgs/group-travel.png';
+import soloTravel from '../imgs/Millennial-Travel.jpg';
+import girlTravel from '../imgs/girls-roadtrip.jpg';
 import AuthService from '../components/AuthService';
 import API from '../utils/API';
 import axios from "axios";
@@ -22,15 +29,11 @@ class NewHome extends Component {
             this.setState({
                 showLoadingScreen: false
             });
-        }, 5000)
+        }, 6000)
     }
 
     loadingComp = () => {
-        const $triangles = document.querySelectorAll('.triangle')
 
-        // Array.prototype.forEach.call($triangles, ($triangle, index) => {
-        //     $triangle.innerHTML = template
-        // });
         return (
             <div className="triangle-wrapper">
                 <div className="triangle triangle-1">
@@ -74,72 +77,90 @@ class NewHome extends Component {
             <div>
                 <img className="main-logo" src={logo} alt="logo" />
                 <h1 className="title-header">Weekend Wanderer</h1>
-
-                <Navbar inverse collapseOnSelect>
-                    <Navbar.Header>
-                        <Navbar.Brand>
-                            <a href="#brand">Weekend Wanderer</a>
-                        </Navbar.Brand>
-                        <Navbar.Toggle />
-                    </Navbar.Header>
-                    <Navbar.Collapse>
-                        <Nav>
-                            <NavItem eventKey={1} href="#">
-                                About
-                            </NavItem>
-                            <NavItem eventKey={2} href="#">
-
-                            </NavItem>
-                            <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-                                <MenuItem eventKey={3.1}>Drop it</MenuItem>
-                                <MenuItem eventKey={3.2}>To the Floor</MenuItem>
-                                <MenuItem eventKey={3.3} href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Drop it Like it's Hot</MenuItem>
-                                <MenuItem divider />
-                                <MenuItem eventKey={3.3}>Separated link</MenuItem>
-                            </NavDropdown>
-                        </Nav>
-                        <Nav pullRight>
-                            <NavItem eventKey={1} href="#">
-                                <Link to="/signup" role="button" className="">
-                                    <div className="btn login-button">
-                                        <button className="btn">Signup</button>
-                                    </div>
-                                </Link>
-                            </NavItem>
-                            <NavItem eventKey={2} href="#">
-                                <Link to="/login" role="button" className="">
-                                    <div className="btn login-button">
-                                        <button className="btn">Login</button>
-                                    </div>
-                                </Link>
-                            </NavItem>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Navbar>;
-
-        <Carousel>
+                <div className="buttons">
+                    <Link to="/signup" role="button" className="signup-login-button">
+                        Signup
+                    </Link>
+                    <Link to="/login" role="button" className="signup-login-button">
+                        Login
+                    </Link>
+                </div>
+                <Carousel>
                     <Carousel.Item>
-                        <img width={900} height={500} alt="900x500" src={pics} />
+                        <img className="slide1" alt="one" src={slide1} />
                         <Carousel.Caption>
                             <h3>First slide label</h3>
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img width={900} height={500} alt="900x500" src={picss} />
+                        <img className="slide2" alt="two" src={slide2} />
                         <Carousel.Caption>
                             <h3>Second slide label</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img width={900} height={500} alt="900x500" src={pics} />
+                        <img className="slide3" alt="three" src={slide3} />
                         <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            <h3>Second slide label</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
-                </Carousel>
+                    <Carousel.Item>
+                        <img className="slide4" alt="four" src={slide4} />
+                        <Carousel.Caption>
+                            <h3>Second slide label</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img className="slide5" alt="five" src={slide5} />
+                        <Carousel.Caption>
+                            <h3>Second slide label</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img className="slide6" alt="six" src={slide6} />
+                        <Carousel.Caption>
+                            <h3>Second slide label</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                </Carousel>;
+
+                <div className="container">
+                    <div className="row">
+                        <h1 className="first-message"> Let the Beat Control Your Body</h1>
+                    </div>
+                </div>
+
+                {/* add paralax to pics */}
+
+                <img src={girlTravel} alt="travel-gal" />
+
+
+                <div  className="pic2" src={soloTravel} alt="solo-gal">
+                </div>
+                <div className="container">
+                    <div className="row">
+                        <h1 className="second-message"> Let the Beat Control Your Body</h1>
+                    </div>
+                </div>
+                
+                <div className="pic3" src={girlTravel} alt="travel-gal">
+</div>
+                <div className="container">
+                    <div className="row">
+                        <h1 className="third-message"> Let the Beat Control Your Body</h1>
+                    </div>
+                </div>
+                
+                <div  className="pic4" src={groupTravel} alt="group">
+                </div>
+
+
             </div>
         )
     }
