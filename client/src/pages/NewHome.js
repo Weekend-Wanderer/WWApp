@@ -27,7 +27,7 @@ class NewHome extends Component {
     }
 
     loadingComp = () => {
-        
+
         return (
             <div className="triangle-wrapper">
                 <div className="triangle triangle-1">
@@ -71,50 +71,15 @@ class NewHome extends Component {
             <div>
                 <img className="main-logo" src={logo} alt="logo" />
                 <h1 className="title-header">Weekend Wanderer</h1>
-
-                <Navbar inverse collapseOnSelect>
-                    <Navbar.Header>
-                        <Navbar.Brand>
-                            <a href="#brand">Weekend Wanderer</a>
-                        </Navbar.Brand>
-                        <Navbar.Toggle />
-                    </Navbar.Header>
-                    <Navbar.Collapse>
-                        <Nav>
-                            <NavItem eventKey={1} href="#">
-                                About
-                            </NavItem>
-                            <NavItem eventKey={2} href="#">
-
-                            </NavItem>
-                            <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-                                <MenuItem eventKey={3.1}>Drop it</MenuItem>
-                                <MenuItem eventKey={3.2}>To the Floor</MenuItem>
-                                <MenuItem eventKey={3.3} href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Drop it Like it's Hot</MenuItem>
-                                <MenuItem divider />
-                                <MenuItem eventKey={3.3}>Separated link</MenuItem>
-                            </NavDropdown>
-                        </Nav>
-                        <Nav pullRight>
-                            <NavItem eventKey={1} href="#">
-                                <Link to="/signup" role="button" className="">
-                                    <div className="btn login-button">
-                                        <button className="btn">Signup</button>
-                                    </div>
-                                </Link>
-                            </NavItem>
-                            <NavItem eventKey={2} href="#">
-                                <Link to="/login" role="button" className="">
-                                    <div className="btn login-button">
-                                        <button className="btn">Login</button>
-                                    </div>
-                                </Link>
-                            </NavItem>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Navbar>;
-
-        <Carousel>
+                <div className="buttons">
+                    <Link to="/signup" role="button" className="signup-login-button">
+                        Signup
+                    </Link>
+                    <Link to="/login" role="button" className="signup-login-button">
+                        Login
+                    </Link>
+                </div>
+                <Carousel>
                     <Carousel.Item>
                         <img width={2000} height={768} alt="900x500" src={pics} />
                         <Carousel.Caption>
@@ -137,19 +102,19 @@ class NewHome extends Component {
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>;
-            
+
                 <div className="container">
                     <div className="row">
                         <h1 className="first-message"> Let the Beat Control Your Body</h1>
                     </div>
                 </div>
 
-{/* add paralax to pics */}
+                {/* add paralax to pics */}
 
-                <img  src={girlTravel} alt="travel-gal"/>
+                <img src={girlTravel} alt="travel-gal" />
 
-                
-                
+
+
             </div>
         )
     }
