@@ -126,73 +126,75 @@ class Stay extends Component {
 
         return (
             <div>
-                <Navbar inverse collapseOnSelect>
-                    <Navbar.Header>
-                        <Navbar.Brand>
-                            <a className="pageTitle" href="#brand">Stay</a>
-                        </Navbar.Brand>
-                        <Navbar.Toggle />
-                    </Navbar.Header>
-                    <Navbar.Collapse>
-                        <Nav>
-                            <NavDropdown eventKey={3} title={this.state.username} id="basic-nav-dropdown">
-                                <MenuItem eventKey={3.1}>Drop it</MenuItem>
-                                <MenuItem eventKey={3.2}>To the Floor</MenuItem>
-                                <MenuItem eventKey={3.3} href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Drop it Like it's Hot</MenuItem>
-                                <MenuItem divider />
-                                <MenuItem eventKey={3.3}>Separated link</MenuItem>
-                            </NavDropdown>
-                        </Nav>
-                        <Nav pullRight>
-                            <NavItem eventKey={2} href="#">
-                                <Link to="/" role="button" className="">
-                                    <div className="glyphicon glyphicon-home">
+                <div className="background">
+                    <Navbar inverse collapseOnSelect>
+                        <Navbar.Header>
+                            <Navbar.Brand>
+                                <a className="pageTitle" href="#brand">Stay</a>
+                            </Navbar.Brand>
+                            <Navbar.Toggle />
+                        </Navbar.Header>
+                        <Navbar.Collapse>
+                            <Nav>
+                                <NavDropdown eventKey={3} title={this.state.username} id="basic-nav-dropdown">
+                                    <MenuItem eventKey={3.1}>Drop it</MenuItem>
+                                    <MenuItem eventKey={3.2}>To the Floor</MenuItem>
+                                    <MenuItem eventKey={3.3} href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Drop it Like it's Hot</MenuItem>
+                                    <MenuItem divider />
+                                    <MenuItem eventKey={3.3}>Separated link</MenuItem>
+                                </NavDropdown>
+                            </Nav>
+                            <Nav pullRight>
+                                <NavItem eventKey={2} href="#">
+                                    <Link to="/" role="button" className="">
+                                        <div className="glyphicon glyphicon-home">
 
-                                    </div>
-                                </Link>
-                            </NavItem>
-                        </Nav>
-                    </Navbar.Collapse>
-                </Navbar>;
-
-
+                                        </div>
+                                    </Link>
+                                </NavItem>
+                            </Nav>
+                        </Navbar.Collapse>
+                    </Navbar>;
+    
+    
                 <div className="container">
-                    <div className="yelp-cards">
-                        <h2>Places to Eat:</h2>
-                        <div className="row">
-                            {this.state.restaurantsRow1.map(restaurant =>
-                                <div className="col-md-4">
-                                    <ImageCard title={restaurant.name} link={restaurant.url} lat={restaurant.coordinates.latitude} lng={restaurant.coordinates.longitude} />
-                                </div>
-                            )
-                            }
+                        <div className="yelp-cards">
+                            <h2>Places to Eat:</h2>
+                            <div className="row">
+                                {this.state.restaurantsRow1.map(restaurant =>
+                                    <div className="col-md-4">
+                                        <ImageCard title={restaurant.name} link={restaurant.url} lat={restaurant.coordinates.latitude} lng={restaurant.coordinates.longitude} />
+                                    </div>
+                                )
+                                }
+                            </div>
+                            <div className="row">
+                                {this.state.restaurantsRow2.map(restaurant =>
+                                    <div className="col-md-4">
+                                        <ImageCard title={restaurant.name} link={restaurant.url} lat={restaurant.coordinates.latitude} lng={restaurant.coordinates.longitude} />
+                                    </div>
+                                )
+                                }
+                            </div>
                         </div>
-                        <div className="row">
-                            {this.state.restaurantsRow2.map(restaurant =>
-                                <div className="col-md-4">
-                                    <ImageCard title={restaurant.name} link={restaurant.url} lat={restaurant.coordinates.latitude} lng={restaurant.coordinates.longitude} />
-                                </div>
-                            )
-                            }
-                        </div>
-                    </div>
-                    <div className="meetup-cards">
-                        <h2>Things to Do:</h2>
-                        <div className="row">
-                            {this.state.eventsRow1.map(event =>
-                                <div className="col-md-4">
-                                    <EventCard name={event.eventName} lat={event.lat} lng={event.lng} link={event.eventLink} />
-                                </div>
-                            )
-                            }
-                        </div>
-                        <div className="row">
-                            {this.state.eventsRow2.map(event =>
-                                <div className="col-md-4">
-                                    <EventCard name={event.eventName} lat={event.lat} lng={event.lng} link={event.eventLink} />
-                                </div>
-                            )
-                            }
+                        <div className="meetup-cards">
+                            <h2>Things to Do:</h2>
+                            <div className="row">
+                                {this.state.eventsRow1.map(event =>
+                                    <div className="col-md-4">
+                                        <EventCard name={event.eventName} lat={event.lat} lng={event.lng} link={event.eventLink} />
+                                    </div>
+                                )
+                                }
+                            </div>
+                            <div className="row">
+                                {this.state.eventsRow2.map(event =>
+                                    <div className="col-md-4">
+                                        <EventCard name={event.eventName} lat={event.lat} lng={event.lng} link={event.eventLink} />
+                                    </div>
+                                )
+                                }
+                            </div>
                         </div>
                     </div>
                 </div>
