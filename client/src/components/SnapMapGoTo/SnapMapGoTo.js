@@ -20,11 +20,12 @@ componentDidMount() {
     this.setState({random: this.state.random + 1});
 }
   render() {
-    var snapMap = `https://map.snapchat.com/embed/@${this.state.lat},${this.state.lng},10.63z`
+    var snapMap = `https://map.snapchat.com/embed/@${this.props.lat},${this.props.lng},10.63z`
       return (
+      <div><p>{this.props.lat}, {this.props.lng}</p>
       <div className="card-image-snap">
       <iframe key={this.state.random} title="snapMap" src={snapMap} width="100%" height="50%" frameborder="0"></iframe>
-      </div>
+      </div></div>
     );
  }
 }

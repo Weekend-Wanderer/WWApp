@@ -44,10 +44,10 @@ class GoTo extends Component {
     handleFlight = () =>{
         var thethis = this;
         if(this.state.myzipcode!==""){
-            axios.get("/api/flightsthisweek/LAX/DBX").then(function (data) {
+            axios.get("/api/flightsthisweek/LAX/SAN").then(function (data) {
                 // console.log(data.data);
                 thethis.setState({
-                    flight: data.data
+                    flight: data.data.scheduledFlights
                 });
             })
         }
@@ -75,7 +75,7 @@ class GoTo extends Component {
         }
     }
     handleinput = (event) =>{
-        var value = event.value;
+        var value = event.target.value;
         this.setState({
             myzipcode: value
         })
