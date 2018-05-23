@@ -1,10 +1,12 @@
 .card-image {
   background: #fff;
-  border-radius: 2px;
-  height: 225px;
+  border: solid;
+  border-radius: 7px;
+  border-width: 4px;
+  height: 300px;
   margin: 1rem;
   position: relative;
-  width: 225px;
+  width: auto;
   text-align: left;
 }
 
@@ -12,7 +14,7 @@
   height: 100%;
   overflow: hidden;
   text-align: center;
-  background:#6CADDC;
+  background:black;
 }
 .card-image > .img-container > img {
   height: auto;
@@ -21,14 +23,17 @@
 
 .card-image:hover {
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
-  height: 226px;
-  width: 226px;
+ 
 }
 
 .card-event {
-  margin-top: 10%; 
+  padding: 10px;
+  color:white;
+  height: 55%;
 }
 
 .card-body {
-  margin-top: 10px; 
+  margin-top: 20px; 
+  color: white;
+  height: 45%;
 }

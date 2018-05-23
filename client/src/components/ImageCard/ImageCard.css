@@ -1,10 +1,11 @@
 .card-image {
   background: #fff;
-  border-radius: 2px;
-  height: 225px;
+  border-radius: 5px;
+  border-width: 4px;
+  height: 300px;
   margin: 1rem;
   position: relative;
-  width: 225px;
+  width: 100%;
   text-align: left;
 }
 
@@ -12,7 +13,7 @@
   height: 100%;
   overflow: hidden;
   text-align: center;
-  background:#6CADDC;
+  background:black;
 }
 .card-image > .img-container > img {
   height: auto;
@@ -21,8 +22,7 @@
 
 .card-image:hover {
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
-  height: 226px;
-  width: 226px;
+  
 }
 iframe {
   position: absolute; 
@@ -31,6 +31,14 @@ iframe {
   left: 0px; 
   right: 0px;}
 
-.card-title {
-  margin-top: 50%; 
+.card-title-snap {
+  margin-top: 62%;
+  padding-left:5px;
+  padding-right:5px; 
+  font-size: 24px;
+  color: white;
+}
+
+.card-title-snap > a {
+  color: white;
 }

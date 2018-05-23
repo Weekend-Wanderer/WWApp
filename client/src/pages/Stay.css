@@ -1,0 +1,22 @@
+body {
+    background: black;
+}
+
+.glyphicon {
+    color: white;
+}
+
+.pageTitle {
+    color: white;
+}
+
+.yelp-cards, .meetup-cards {
+    padding: 30px;
+    background: white;
+    margin-bottom: 30px;
+    border: solid;
+    border-radius: 10px;
+}
+
+
+
