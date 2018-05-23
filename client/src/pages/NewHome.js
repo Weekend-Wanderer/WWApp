@@ -33,7 +33,7 @@ class NewHome extends Component {
     }
 
     loadingComp = () => {
-        
+
         return (
             <div className="triangle-wrapper">
                 <div className="triangle triangle-1">
@@ -77,6 +77,7 @@ class NewHome extends Component {
             <div>
                 <img className="main-logo" src={logo} alt="logo" />
                 <h1 className="title-header">Weekend Wanderer</h1>
+<<<<<<< HEAD
 
                 <Navbar inverse collapseOnSelect>
                     <Navbar.Header>
@@ -121,6 +122,17 @@ class NewHome extends Component {
                 </Navbar>;
 
         <Carousel>
+=======
+                <div className="buttons">
+                    <Link to="/signup" role="button" className="signup-login-button">
+                        Signup
+                    </Link>
+                    <Link to="/login" role="button" className="signup-login-button">
+                        Login
+                    </Link>
+                </div>
+                <Carousel>
+>>>>>>> 2cb2844f0fe422bedf577168139fe88bc7b214f3
                     <Carousel.Item>
                         <img className="slide1" alt="one" src={slide1} />
                         <Carousel.Caption>
@@ -164,15 +176,19 @@ class NewHome extends Component {
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>;
-            
+
                 <div className="container">
                     <div className="row">
                         <h1 className="first-message"> Let the Beat Control Your Body</h1>
                     </div>
                 </div>
 
-{/* add paralax to pics */}
+                {/* add paralax to pics */}
 
+                <img src={girlTravel} alt="travel-gal" />
+
+
+<<<<<<< HEAD
                 <div  className="pic2" src={soloTravel} alt="solo-gal">
                 </div>
                 <div className="container">
@@ -192,6 +208,8 @@ class NewHome extends Component {
                 <div  className="pic4" src={groupTravel} alt="group">
                 </div>
 
+=======
+>>>>>>> 2cb2844f0fe422bedf577168139fe88bc7b214f3
 
             </div>
         )
