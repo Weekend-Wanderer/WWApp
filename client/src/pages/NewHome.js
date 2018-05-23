@@ -2,8 +2,14 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Carousel } from 'react-bootstrap';
 import logo from '../imgs/WW_logo_thicc.png';
-import pics from '../imgs/islands.jpg';
-import picss from '../imgs/travel.jpg';
+import slide1 from '../imgs/islands.jpg';
+import slide2 from '../imgs/B_on_hay.jpg';
+import slide3 from '../imgs/lifeguard.jpg';
+import slide4 from '../imgs/hot-air-balloon.jpg';
+import slide5 from '../imgs/dog-travel.jpg';
+import slide6 from '../imgs/san-diego-skyline.jpg';
+import groupTravel from '../imgs/group-travel.png';
+import soloTravel from '../imgs/Millennial-Travel.jpg';
 import girlTravel from '../imgs/girls-roadtrip.jpg';
 import AuthService from '../components/AuthService';
 import API from '../utils/API';
@@ -75,7 +81,7 @@ class NewHome extends Component {
                 <Navbar inverse collapseOnSelect>
                     <Navbar.Header>
                         <Navbar.Brand>
-                            <a href="#brand">Weekend Wanderer</a>
+                            <a href="#https://www.youtube.com/watch?v=dQw4w9WgXcQ">Weekend Wanderer</a>
                         </Navbar.Brand>
                         <Navbar.Toggle />
                     </Navbar.Header>
@@ -116,24 +122,45 @@ class NewHome extends Component {
 
         <Carousel>
                     <Carousel.Item>
-                        <img width={2000} height={768} alt="900x500" src={pics} />
+                        <img className="slide1" alt="one" src={slide1} />
                         <Carousel.Caption>
                             <h3>First slide label</h3>
                             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img width={2000} height={500} alt="900x500" src={picss} />
+                        <img className="slide2" alt="two" src={slide2} />
                         <Carousel.Caption>
                             <h3>Second slide label</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <img width={2000} height={500} alt="900x500" src={pics} />
+                        <img className="slide3" alt="three" src={slide3} />
                         <Carousel.Caption>
-                            <h3>Third slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            <h3>Second slide label</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img className="slide4" alt="four" src={slide4} />
+                        <Carousel.Caption>
+                            <h3>Second slide label</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img className="slide5" alt="five" src={slide5} />
+                        <Carousel.Caption>
+                            <h3>Second slide label</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img className="slide6" alt="six" src={slide6} />
+                        <Carousel.Caption>
+                            <h3>Second slide label</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>;
@@ -146,10 +173,26 @@ class NewHome extends Component {
 
 {/* add paralax to pics */}
 
-                <img  src={girlTravel} alt="travel-gal"/>
+                <div  className="pic2" src={soloTravel} alt="solo-gal">
+                </div>
+                <div className="container">
+                    <div className="row">
+                        <h1 className="second-message"> Let the Beat Control Your Body</h1>
+                    </div>
+                </div>
+                
+                <div className="pic3" src={girlTravel} alt="travel-gal">
+</div>
+                <div className="container">
+                    <div className="row">
+                        <h1 className="third-message"> Let the Beat Control Your Body</h1>
+                    </div>
+                </div>
+                
+                <div  className="pic4" src={groupTravel} alt="group">
+                </div>
 
-                
-                
+
             </div>
         )
     }
