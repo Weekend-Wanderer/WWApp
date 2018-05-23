@@ -8,6 +8,7 @@
   position: relative;
   width: auto;
   text-align: left;
+  box-shadow: 10px 10px 5px grey;
 }
 
 .card-image > .img-container {
@@ -22,7 +23,7 @@
 }
 
 .card-image:hover {
-  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  box-shadow: 5px 5px 2px grey;
  
 }
 
