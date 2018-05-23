@@ -20,7 +20,7 @@ componentDidMount() {
     this.setState({random: this.state.random + 1});
 }
   render() {
-    var snapMap = `https://map.snapchat.com/embed/@${this.props.lat},${this.props.lng},10.63z`
+    var snapMap = `https://map.snapchat.com/embed/@${this.props.lat},${this.props.lng},8.63z`
       return (
       <div><p>{this.props.lat}, {this.props.lng}</p>
       <div className="card-image-snap">
