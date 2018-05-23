@@ -9,13 +9,67 @@ import API from '../utils/API';
 import axios from "axios";
 import LoginPop from "../components/LoginPop";
 import Login from "./Login";
+import './NewHome.css';
 
 class NewHome extends Component {
     state = {
-        clicked: ""
+        clicked: "",
+        showLoadingScreen: true
     }
 
-    render() {
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({
+                showLoadingScreen: false
+            });
+        }, 5000)
+    }
+
+    loadingComp = () => {
+        const $triangles = document.querySelectorAll('.triangle')
+
+        // Array.prototype.forEach.call($triangles, ($triangle, index) => {
+        //     $triangle.innerHTML = template
+        // });
+        return (
+            <div className="triangle-wrapper">
+                <div className="triangle triangle-1">
+                    <svg className="triangle-svg" viewBox="0 0 140 141">
+                        <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                            <polygon className="triangle-polygon" points="20 0, 0 20, 30 50, 0 80, 20 100, 50 70, 80 100, 100 80, 70 50, 100 20, 80 0, 50 30"></polygon>
+                        </g>
+                    </svg></div>
+                <div className="triangle triangle-2">
+                    <svg className="triangle-svg" viewBox="0 0 140 141">
+                        <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                            <polygon className="triangle-polygon" points="20 0, 0 20, 30 50, 0 80, 20 100, 50 70, 80 100, 100 80, 70 50, 100 20, 80 0, 50 30"></polygon>
+                        </g>
+                    </svg></div>
+                <div className="triangle triangle-3">
+                    <svg className="triangle-svg" viewBox="0 0 140 141">
+                        <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                            <polygon className="triangle-polygon" points="20 0, 0 20, 30 50, 0 80, 20 100, 50 70, 80 100, 100 80, 70 50, 100 20, 80 0, 50 30"></polygon>
+                        </g>
+                    </svg></div>
+                <div className="triangle triangle-4">
+                    <svg className="triangle-svg" viewBox="0 0 140 141">
+                        <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                            <polygon className="triangle-polygon" points="20 0, 0 20, 30 50, 0 80, 20 100, 50 70, 80 100, 100 80, 70 50, 100 20, 80 0, 50 30"></polygon>
+                        </g>
+                    </svg></div>
+                <div className="triangle triangle-5">
+                    <svg className="triangle-svg" viewBox="0 0 140 141">
+                        <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                            <polygon className="triangle-polygon" points="20 0, 0 20, 30 50, 0 80, 20 100, 50 70, 80 100, 100 80, 70 50, 100 20, 80 0, 50 30"></polygon>
+                        </g>
+                    </svg>
+                </div>
+                <p className="triangle-loading">Loading</p>
+            </div>
+        )
+    }
+
+    mainPageDisplay = () => {
         return (
             <div>
                 <img className="main-logo" src={logo} alt="logo" />
@@ -32,10 +86,10 @@ class NewHome extends Component {
                         <Nav>
                             <NavItem eventKey={1} href="#">
                                 About
-      </NavItem>
+                            </NavItem>
                             <NavItem eventKey={2} href="#">
-                                
-      </NavItem>
+
+                            </NavItem>
                             <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
                                 <MenuItem eventKey={3.1}>Drop it</MenuItem>
                                 <MenuItem eventKey={3.2}>To the Floor</MenuItem>
@@ -46,24 +100,24 @@ class NewHome extends Component {
                         </Nav>
                         <Nav pullRight>
                             <NavItem eventKey={1} href="#">
-                            <Link to="/signup" role="button" className="">
-                    <div className="btn login-button">
-                        <button className="btn">Signup</button>
-                    </div>
-                </Link>
+                                <Link to="/signup" role="button" className="">
+                                    <div className="btn login-button">
+                                        <button className="btn">Signup</button>
+                                    </div>
+                                </Link>
                             </NavItem>
                             <NavItem eventKey={2} href="#">
-                            <Link to="/login" role="button" className="">
-                    <div className="btn login-button">
-                        <button className="btn">Login</button>
-                    </div>
-                </Link>
+                                <Link to="/login" role="button" className="">
+                                    <div className="btn login-button">
+                                        <button className="btn">Login</button>
+                                    </div>
+                                </Link>
                             </NavItem>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>;
 
-                <Carousel>
+        <Carousel>
                     <Carousel.Item>
                         <img width={900} height={500} alt="900x500" src={pics} />
                         <Carousel.Caption>
@@ -85,14 +139,15 @@ class NewHome extends Component {
                             <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
-                </Carousel>;
-                
-            
+                </Carousel>
+            </div>
+        )
+    }
 
-                
-                
-
-
+    render() {
+        return (
+            <div className={this.state.showLoadingScreen ? 'x-loader' : ""}>
+                {this.state.showLoadingScreen ? this.loadingComp() : this.mainPageDisplay()}
             </div>
         )
     }
