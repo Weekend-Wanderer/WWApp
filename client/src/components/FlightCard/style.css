@@ -1,0 +1,100 @@
+.card-flight {
+  background: white;
+  border-radius: 2px;
+  padding: 10px;
+  margin: 3px;
+  position: relative;
+  width: 100%;
+  text-align: left;
+  border: 1px solid gray;
+  
+  
+}
+.flight-title, .flight-local_date, .flight-local_time, .flight-link, .flight-group_address{
+  color: blue;
+}
+.flight-fromto{
+  font-size: 33px;
+  color: #212121 !important;
+}
+.flightDay{
+  font-size: 23px;
+  color: #212121 !important;
+  margin-top: calc(50% - 45px);
+  text-align: center;
+  font-weight: bolder;
+}
+.flightDayMonth{
+  font-size: 18px;
+  color: #212121 !important;
+  text-align: center;
+}
+.flight-times{
+  font-size: 14px;
+  color: #212121 !important;
+}
+.colorgreen {
+  color: black;
+  font-weight: 900;
+}
+.biggreen{
+  font-size: 22px;
+  color: green;
+}
+.card-flight:hover{
+  background-color: gray;
+}
+
+.planeGoButton{
+  font-size: 23px;
+  margin-top: 10px;
+  height: 100%;
+  width: 400px;
+  background-color: red;
+  color: white;
+}
+
+.tripInfo{
+  font-size: 23px;
+  margin-right: 350px;
+  text-align: right;
+  margin-top: 110px;
+  width: 100%;
+  float:right;
+  position: absolute;
+  color: gray;
+
+}
+.airplane-ico-start{
+    color:#34a853;
+    transform: rotate(90deg);
+    height: 33px;
+    position: absolute;
+    right: 75%;
+    top: 1px;
+    width: 33px;
+}
+.airplane-ico-end{
+  color:#34a853;
+  transform: rotate(90deg);
+  height: 33px;
+  position: absolute;
+  right: 25%;
+  top: 1px;
+  width: 33px;
+}
+
+.arrow-div-start{
+  height:2px;
+  position:absolute;
+  top:16px;
+  width:20%;background-color:#34a853
+}
+
+
+.arrow-div-end{
+height:2px;
+position:absolute;
+top:16px;
+width:70%;background-color:#34a853
+}

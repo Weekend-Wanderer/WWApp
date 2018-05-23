@@ -1,0 +1,1 @@
+export { FlightCard } from "./FlightCard";

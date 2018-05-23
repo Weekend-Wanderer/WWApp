@@ -10,6 +10,9 @@ import withAuth from '../components/withAuth';
 import axios from "axios";
 import {SearchZip} from "../components/gotopage";
 import {Wrapper} from "../components/Wrapper";
+import {FlightCard} from "../components/FlightCard";
+import {MeetupEventCard} from "../components/MeetupEventCard";
+
 
 const Auth = new AuthService();
 
@@ -23,7 +26,21 @@ class GoTo extends Component {
         lng: "",
         meetup: [],
         yelp: [],
-        flight:[]
+        flight1:[],
+        flight2:[],
+
+        flight3:[],
+        flight4:[],
+
+        flight5:[],
+        flight6:[],
+
+        flight7:[],
+        flight8:[],
+
+        flight9:[],
+        flight10:[]
+
     };
 
     componentDidMount() {
@@ -35,24 +52,46 @@ class GoTo extends Component {
             lng: this.props.user.lng
         })
   
-        
+        this.handleAPIS();
     }
     handleAPIS = ()=>{
-        this.handleFlight();
+        var base = "SAN"
+        var citiesvisit = ["LAX", "SFO", "SEA", "LAS", "PDX"];
+         
+        
+
+        this.handleFlight("flight1", base, citiesvisit[0], 5); // Flight
+        this.handleFlight("flight2", citiesvisit[0], base, 7); // Return Flight
+
+        this.handleFlight("flight3", base, citiesvisit[1], 5); // Flight
+        this.handleFlight("flight4", citiesvisit[1], base, 6); // Return Flight
+
+        this.handleFlight("flight5", base, citiesvisit[2], 5); // Flight
+        this.handleFlight("flight6", citiesvisit[2], base, 6); // Return Flight
+
+        this.handleFlight("flight7", base, citiesvisit[3], 5); // Flight
+        this.handleFlight("flight8", citiesvisit[3], base, 6); // Return Flight
+
+        this.handleFlight("flight9", base, citiesvisit[4], 5); // Flight
+        this.handleFlight("flight10", citiesvisit[4], base, 6); // Return Flight
+
         this.handleYelp();
         this.handleMeetup();
     }
-    handleFlight = () =>{
+    handleFlight = (tto, from,to,day) =>{
         var thethis = this;
         if(this.state.myzipcode!==""){
-            axios.get("/api/flightsthisweek/LAX/SAN").then(function (data) {
-                // console.log(data.data);
+                             //from/TO/DAYOFTHEWEEK
+            // axios.get("/api/flightsthisweek/LAX/SAN/5").then(function (data) {
+            axios.get(`/api/flightsthisweek/${from}/${to}/${day}`).then(function (data) {
+                console.log(data.data.scheduledFlights);
                 thethis.setState({
-                    flight: data.data.scheduledFlights
+                    [tto]: data.data.scheduledFlights
                 });
             })
         }
     }
+    
     handleMeetup = () =>{
         var thethis = this;
         if(this.state.myzipcode!==""){
@@ -90,15 +129,23 @@ class GoTo extends Component {
         this.props.history.replace(this.state.profileLink);
     };
 
-    render() {
+    render() {        
         return (
             <Wrapper>
                 <h1>GO!</h1>
                 <SearchZip searchzipcode={this.state.myzipcode} buttonhandle={this.handleAPIS} handleinput={this.handleinput}/>
-<div>
-                <Well bsSize="large">{JSON.stringify(this.state.flight)}</Well>
-                <Well bsSize="large">{JSON.stringify(this.state.yelp)}</Well>
-                <Well bsSize="large">{JSON.stringify(this.state.meetup)}</Well>
+<div>               
+
+                
+
+                {(this.state.flight1[0] && this.state.flight2[0]) ? <FlightCard tflightOne={this.state.flight1} tflightTwo={this.state.flight2} /> : "" }
+                
+                {(this.state.flight3[0] && this.state.flight4[0]) ? <FlightCard tflightOne={this.state.flight3} tflightTwo={this.state.flight4} /> : "" }
+                
+                {(this.state.flight5[0] && this.state.flight6[0]) ? <FlightCard tflightOne={this.state.flight5} tflightTwo={this.state.flight6} /> : "" }
+                
+                {(this.state.flight7[0] && this.state.flight8[0]) ? <FlightCard tflightOne={this.state.flight7} tflightTwo={this.state.flight8} /> : "" } 
+                {(this.state.flight9[0] && this.state.flight10[0]) ? <FlightCard tflightOne={this.state.flight9} tflightTwo={this.state.flight10} /> : "" } 
                 </div>
       </Wrapper>
         );
