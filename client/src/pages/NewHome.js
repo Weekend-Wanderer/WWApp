@@ -28,7 +28,7 @@ class NewHome extends Component {
             this.setState({
                 showLoadingScreen: false
             });
-        }, 6000)
+        }, 100)
     }
 
     loadingComp = () => {
@@ -74,109 +74,125 @@ class NewHome extends Component {
     mainPageDisplay = () => {
         return (
             <div className="parallax">
-                <div className="parallax__group">
-                <div className="parallax__layer parallax__layer--fore">
-                <img className="main-logo" src={logo} alt="logo" />
-                </div>
-                <div className="parallax__layer parallax__layer--fore">
-                <h1 className="title-header">Weekend Wanderer</h1>
-                </div>
-                <div className="parallax__layer parallax__layer--fore">
-                <div className="buttons">
-                    <Link to="/signup" role="button" className="signup-login-button">
-                        Signup
-                    </Link>
-                    <Link to="/login" role="button" className="signup-login-button">
-                        Login
-                    </Link>
-                </div>
-                </div>
-                <div className="parallax__layer parallax__layer--back">
-                <Carousel>
-                    <Carousel.Item>
-                        <img className="slide1" alt="one" src={slide1} />
+            <div id="parallax_group1Carousel">
+                    <div className="parallax__layer">
+                        <Carousel>
+                            <Carousel.Item>
+                                <img className="slide1" alt="one" src={slide1} />
+                            </Carousel.Item>
 
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img className="slide2" alt="two" src={slide2} />
+                            <Carousel.Item>
+                                <img className="slide2" alt="two" src={slide2} />
+                            </Carousel.Item>
 
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img className="slide3" alt="three" src={slide3} />
+                            <Carousel.Item>
+                                <img className="slide3" alt="three" src={slide3} />
+                            </Carousel.Item>
 
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img className="slide4" alt="four" src={slide4} />
-                        <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img className="slide5" alt="five" src={slide5} />
-                        <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </Carousel.Caption>
-                    
-                    </Carousel.Item>
-                </Carousel>
-                </div>
-                </div>
-            <div className="parallax__group">
+                            <Carousel.Item>
+                                <img className="slide4" alt="four" src={slide4} />
+                                <Carousel.Caption>
+                                    <h3></h3>
+                                    <p></p>
+                                </Carousel.Caption>
+                            </Carousel.Item>
 
-                <div className="parallax__layer parallax__layer--fore">
-                <div className="container">
-                    <div className="row">
-                        <h1 className="message"> 
-                        Choose your path</h1>
-                        <h1>
-                        Let the button decide</h1>
-                        <h2 className="message">
-                        Introducing the easiest way to find great trips
-                        </h2>
-                    </div>
-                </div>
-                </div>
-                </div>
-                <div className="parallax__group">
-                {/* add paralax to pics */}
-                <div className="parallax__layer parallax__layer--fore">
-                <img src={girlTravel} alt="travel-gal" />
-                </div>
-                
-            </div>
+                            <Carousel.Item>
+                                <img className="slide5" alt="five" src={slide5} />
+                                <Carousel.Caption>
+                                    <h3></h3>
+                                    <p></p>
+                                </Carousel.Caption>
+                            </Carousel.Item>
 
-                <div  className="pic2" src={soloTravel} alt="solo-gal">
-                </div>
-                <div className="container">
-                    <div className="row">
-                    <h1 className="message"> 
-                    A complete trip in just one tap</h1>
-                        <h2 className="message">
-                        Say goodbye to hours of planning
-                        </h2>
+                        </Carousel>
                         </div>
+                    
                 </div>
+                <div id="parallax_group1Logo">
+                    <div className="parallax__layer">
+                        <img className="main-logo" src={logo} alt="logo" />
+                    </div>
+                    </div>
+                <div id="parallax_group1" className="parallax__group">
+                    <div id="parallax_group1Brand">
+                    <div className="parallax__layer">
+                        <h1 className="title-header">Weekend Wanderer</h1>
+                        </div>
+                    </div>
+                    <div className="parallax__layer">
+                        <div className="buttons">
+                            <Link to="/signup" role="button" className="signup-login-button">
+                                Signup
+                            </Link>
+                            <Link to="/login" role="button" className="signup-login-button">
+                                Login
+                            </Link>
+                        </div>
+                    </div>
+                    </div>
+                       {/*end of first group*/}
+                {/*Begining of second group*/}
 
-                <div className="img-container">
-                    <img src={demo} className="pic3" alt="travel-gal" />
-                </div>
-
-                <div className="container">
-                    <div className="row">
-                    <h1 className="message"> 
-                    Meet new people around the world</h1>
-                        <h2 className="message">
-                        making new friends for life!
-                        </h2>             
+                <div id="parallax_group2" className="parallax__group">
+                    <div className="parallax__layer parallax__layer--base">
+                        <div className="container">
+                            <div className="row">
+                                <h1 className="message">
+                                    Choose your path</h1>
+                                <h1>
+                                    Let the button decide</h1>
+                                <h2 className="message">
+                                    Introducing the easiest way to find great trips
+                        </h2>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div  className="pic4" src={girlTravel} alt="group">
-                </div>
+                {/*end of second group*/}
 
-            
+
+                <div id="parallax_group3" className="parallax__group">
+                    <div id="parallax_group3SoloTravel">
+                    <div className="parallax__layer parallax__layer--back">
+                    <div className="img-container">
+                        <img className="pic2" src={soloTravel} alt="solo-gal" />
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                <div id="parallax_group4">
+                <div className="">
+                    <div className="container">
+                        <div className="row">
+                            <h1 className="message">
+                                A complete trip in just one tap
+                            </h1>
+                            <h2 className="message">
+                                Say goodbye to hours of planning
+                            </h2>
+                        </div>
+                    </div>
+
+                    <div className="img-container">
+                        <img src={demo} className="pic3" alt="travel-gal" />
+                    </div>
+
+                    <div className="container">
+                        <div className="row">
+                            <h1 className="message">
+                                Meet new people around the world
+                            </h1>
+                            <h2 className="message">
+                                Making new friends for life!
+                            </h2>
+                        </div>
+                    </div>
+                    <div className="img-container">
+                    <img className="pic4" src={girlTravel} alt="group" />
+                    </div>
+                </div>
+                </div>
             </div>
         )
     }
