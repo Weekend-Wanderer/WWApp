@@ -15,6 +15,7 @@ import EventCard from "../components/EventCard";
 import { MeetupEventCard } from "../components/MeetupEventCard";
 import SnapMapGoTo from "../components/SnapMapGoTo";
 import { Link } from "react-router-dom";
+import logo from "../imgs/WW_logo_thicc.png";
 const Auth = new AuthService();
 
 class GoTo extends Component {
@@ -151,7 +152,8 @@ class GoTo extends Component {
         console.log(this.state.myzipcode);
         return (
             <Wrapper>
-                <h1>GO To! {this.state.destination}</h1>
+                <a  href="/home"><img className="stay-logo" alt="logo" src={logo}/></a>
+                <h1>Go to: {this.state.destination}</h1>
                 <SearchZip searchzipcode={this.state.myzipcode} buttonhandle={this.handleAPIS} handleinput={(event) => this.handleinput(event)} />
                 <div>
                     <SnapMapGoTo lat={this.state.lat} lng={this.state.lng} />
