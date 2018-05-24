@@ -67,6 +67,89 @@ body {
   display: none;
 }
 
+.signuptitle {
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 20px;
+}
 
+.signuplabel {
+  color: white;
+  font-size: 18px;
+  margin-top: 10px;
+}
 
+.btn-primary, .btn-success {
+  margin-top: 4px;
+  background: white;
+  color: black;
+  border: BLACK;
+  font-size: 18px;
+  
+}
 
+.btn-success {
+  margin-top: 20px;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.btn-primary:hover, .btn-success:hover, .login-link:hover {
+background: grey;
+color: white;
+border: solid white 1px;
+}
+
+.login-link {
+  color: black;
+  background: white;
+  text-align: center;
+  padding: 10px 10px 10px 10px;
+  border: solid 0px;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+.login-col-title {
+  color: white;
+  font-size: 18px;
+  
+}
+
+.signup-logo {
+  height: 75px;
+  width: auto;
+  margin-top: 10px;
+}
+
+.form-box {
+  position: absolute;
+  left: 25%;
+  width: 50%;
+  margin-top: 20px;
+  margin-left: 20px;
+  border: 1px solid #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.search-button {
+  color: black;
+}
+
+.glyphicon-search:before {
+  color: black;
+}
+
+#zipcode {
+  width: 70%;
+}
+
+.background {
+  background: black;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
