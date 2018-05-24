@@ -1,12 +1,13 @@
 .card-flight {
   background: white;
-  border-radius: 2px;
   padding: 10px;
   margin: 3px;
   position: relative;
   width: 100%;
   text-align: left;
-  border: 1px solid gray;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-bottom: 10px;
   
   
 }
@@ -62,7 +63,7 @@
   width: 100%;
   float:right;
   position: absolute;
-  color: gray;
+  color: black;
 
 }
 .airplane-ico-start{
