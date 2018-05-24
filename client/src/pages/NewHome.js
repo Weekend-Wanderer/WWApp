@@ -66,7 +66,7 @@ class NewHome extends Component {
                         </g>
                     </svg>
                 </div>
-                <p className="triangle-loading">Loading</p>
+                <p className="triangle-loading">Wandering</p>
             </div>
         )
     }
@@ -118,13 +118,7 @@ class NewHome extends Component {
                             <h3>Second slide label</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img className="slide6" alt="six" src={slide6} />
-                        <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        </Carousel.Caption>
+                    
                     </Carousel.Item>
                 </Carousel>
                 </div>
@@ -179,7 +173,7 @@ class NewHome extends Component {
                     </div>
                 </div>
                 
-                <div  className="pic4" src={groupTravel} alt="group">
+                <div  className="pic4" src={girlTravel} alt="group">
                 </div>
 
             
