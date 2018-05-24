@@ -134,7 +134,7 @@ class Stay extends Component {
                             <Nav pullRight>
                                 <NavItem eventKey={2} href="#">
                                     <Link to="/" role="button" className="">
-                                        <div className="glyphicon glyphicon-home">
+                                        <div className="glyphicon glyphicon-home stay-glyphicon-home">
 
                                         </div>
                                     </Link>
