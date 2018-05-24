@@ -26,7 +26,7 @@ nav.navbar {
     background: black;
 }
 
-.glyphicon-home:before {
+.stay-glyphicon-home:before {
     content: "\e021";
     font-size: 24px;
     color: white;
