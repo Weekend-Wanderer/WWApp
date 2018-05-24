@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import '../../components/homepage/style.css';
 import GoButton from '../homepage/gobutton';
-import { Alert } from 'react-bootstrap';
-
 import StayButton from '../homepage/staybutton';
+import logoInv from '../../imgs/WW_logo_stay_go_invert.png';
 
 
 import AuthService from '../../components/AuthService';
@@ -37,21 +37,16 @@ class Home extends Component {
     console.log(this.props.user)
     return (
       <div className="App">
-        {/* <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome {this.props.user.email}</h2>
-          <p className="App-intro">
-          <button type="button" className="btn btn-primary" onClick={this.goToEditProfile}>Go to Profile</button>
-          <button type="button" className="btn btn-danger" onClick={this.handleLogout}>Logout</button>
-        </p>
-        </div> */}
+        <Link className="home-btn" to="/">
+          <div className="glyphicon glyphicon-home wonderer-icon">
+          </div>
+        </Link>
         <StayButton />
         <GoButton />
-        <Alert bsStyle="warning">
-          <strong>Holy guacamole!</strong> Best check yo self, you're not looking too
-          good.
-        </Alert>;
-      </div>
+        <a className="invert-logo" href="https://www.youtube.com/watch?v=xfr64zoBTAQ" target="_blank">
+          <img src={logoInv} alt="weekend-invert-logo" />
+        </a>
+            </div>
     );
   }
 }

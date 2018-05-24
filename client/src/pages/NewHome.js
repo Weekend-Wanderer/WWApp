@@ -66,7 +66,7 @@ class NewHome extends Component {
                         </g>
                     </svg>
                 </div>
-                <p className="triangle-loading">Loading</p>
+                <p className="triangle-loading">Wandering</p>
             </div>
         )
     }

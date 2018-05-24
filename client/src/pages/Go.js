@@ -11,7 +11,7 @@ import {SearchZip} from "../components/gotopage";
 import {Wrapper} from "../components/Wrapper";
 import {FlightCard} from "../components/FlightCard";
 import {MeetupEventCard} from "../components/MeetupEventCard";
-
+import logo from "../imgs/WW_logo_thicc.png";
 
 const Auth = new AuthService();
 
@@ -131,27 +131,28 @@ class GoTo extends Component {
     render() {        
         return (
             <Wrapper>
-                <h1>GO!</h1>
+                <a  href="/home"><img className="stay-logo" alt="logo" src={logo}/></a>
+                <h1>Go</h1>
                 <SearchZip searchzipcode={this.state.myzipcode} buttonhandle={this.handleAPIS} handleinput={this.handleinput}/>
-            <div className="parallax">
-            <div className="parallax__group">
-                <div className="parallax__layer parallax__layer--base">
+            <div className="">
+            <div className="">
+                <div className="">
                 {(this.state.flight1[0] && this.state.flight2[0]) ? <FlightCard tflightOne={this.state.flight1} tflightTwo={this.state.flight2} /> : "" }
                 </div>
 
-                <div className="parallax__layer parallax__layer--back">
+                <div className="">
                 {(this.state.flight3[0] && this.state.flight4[0]) ? <FlightCard tflightOne={this.state.flight3} tflightTwo={this.state.flight4} /> : "" }
                 </div>
 
-                <div className="parallax__layer parallax__layer--fore">
+                <div className="">
                 {(this.state.flight5[0] && this.state.flight6[0]) ? <FlightCard tflightOne={this.state.flight5} tflightTwo={this.state.flight6} /> : "" }
                 </div>
 
-                <div className="parallax__layer parallax__layer--back">
+                <div className="">
                 {(this.state.flight7[0] && this.state.flight8[0]) ? <FlightCard tflightOne={this.state.flight7} tflightTwo={this.state.flight8} /> : "" } 
                 </div>
 
-                <div className="parallax__layer parallax__layer--base">
+                <div className="">
                 {(this.state.flight9[0] && this.state.flight10[0]) ? <FlightCard tflightOne={this.state.flight9} tflightTwo={this.state.flight10} /> : "" } 
                 </div>
 
