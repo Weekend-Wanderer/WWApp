@@ -48,7 +48,7 @@ body {
   width: 30%;
   position: absolute;
   top: 80%;
-  left: 40%;
+  left: calc(50% - 166px);
 }
 
 .signup-login-button {
@@ -57,7 +57,8 @@ body {
   text-align: center;
   margin-left: 5%;
   margin-right: 10%;
-  background: black;
+  background-color: black;
+  color: white;
   padding: 15px;
   border: solid #dcdcdc 1px;
   border-radius: 5px;
@@ -66,6 +67,10 @@ body {
 .signup-login-button:hover {
   background: white;
   color: black;
+}
+.signup-login-button:hover{
+  text-decoration: none;
+  background: white;
 }
 
 
@@ -301,10 +306,23 @@ border: solid white 1px;
               margin-top: 465px;
               transform: translateZ(600px) scale(0.12);
             }
+            #parallax_group4minus1{
+              margin-top: -480px ;
+              transform: translateZ(-100px) scale(1.3);
+            }
+            
+            #parallax_group4img{
+              margin-top: 300px ;
+              transform: translateZ(-1000px) scale(1.07);
+            }
+            #parallax_group4text2{
+              margin-top: 100px ;
+              transform: translateZ(-600px) scale(1);
+            }
             #parallax_group4{
-              margin-top: -1260px ;
-              transform: translateZ(100px) scale(0.7);
-              
+              margin-top: 140px ;
+              transform: translateZ(-10000px) scale(1.1);
+              height: 690px; 
             }
 
 

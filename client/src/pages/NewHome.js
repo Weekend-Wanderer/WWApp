@@ -122,10 +122,10 @@ class NewHome extends Component {
                     </div>
                     <div className="parallax__layer">
                         <div className="buttons">
-                            <Link to="/signup" role="button" className="signup-login-button">
+                            <Link id="signupBtn" to="/signup" role="button" className="signup-login-button">
                                 Signup
                             </Link>
-                            <Link to="/login" role="button" className="signup-login-button">
+                            <Link id="loginBtn" to="/login" role="button" className="signup-login-button">
                                 Login
                             </Link>
                         </div>
@@ -161,7 +161,10 @@ class NewHome extends Component {
                     </div>
                     </div>
                 </div>
-                <div id="parallax_group4">
+
+
+
+                <div id="parallax_group4minus1">
                 <div className="">
                     <div className="container">
                         <div className="row">
@@ -173,11 +176,13 @@ class NewHome extends Component {
                             </h2>
                         </div>
                     </div>
-
+                    </div>
+                    <div id="parallax_group4img">
                     <div className="img-container">
                         <img src={demo} className="pic3" alt="travel-gal" />
                     </div>
-
+                    </div>
+                    <div id="parallax_group4text2">
                     <div className="container">
                         <div className="row">
                             <h1 className="message">
@@ -188,6 +193,8 @@ class NewHome extends Component {
                             </h2>
                         </div>
                     </div>
+                    </div>
+                    <div id="parallax_group4">
                     <div className="img-container">
                     <img className="pic4" src={girlTravel} alt="group" />
                     </div>
