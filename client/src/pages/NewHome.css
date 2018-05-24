@@ -1,21 +1,16 @@
-.pic2, .pic3, .pic4 {
-  height: 400px;
+.message {
+  align-items: center;
+}
+
+.img-container {
+  height: 550px;
   width: 100%;
-  background-size: cover;
-  /* background-position: ; */
+  overflow: hidden;
 }
 
-.pic2 {
-  background-image: url("/client/src/imgs/Millennial-Travel.jpeg");
-
-}
-
-.pic3 {
-  background-image: url("/client/src/imgs/girls-roadtrip.jpg");
-}
-
-.pic4 {
-  background-image: url("/client/src/imgs/group-travel.png");
+.img-container > img {
+  width: 100%;
+  overflow: hidden;
 }
 
 .slide1, .slide2, .slide3, .slide4, .slide5, .slide6 {
@@ -91,13 +86,13 @@
     font-family: 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 12px;
     font-weight: 300;
-    left: 50%;
+    left: 47%;
     letter-spacing: 8px;
     margin-left: 4px;
     margin-top: 10px;
     opacity: 0;
     position: absolute;
-    top: 100%;
+    top: 95%;
     transform: translate3d(-50%, -50%, 0);
     text-transform: uppercase;
   }
