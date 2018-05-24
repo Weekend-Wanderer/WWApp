@@ -57,11 +57,18 @@ body {
   text-align: center;
   margin-left: 5%;
   margin-right: 10%;
-  background: white;
+  background: black;
   padding: 15px;
   border: solid #dcdcdc 1px;
   border-radius: 5px;
+  color: white;
 }
+.signup-login-button:hover {
+  background: white;
+  color: black;
+}
+
+
 
 .navbar-default {
   display: none;
