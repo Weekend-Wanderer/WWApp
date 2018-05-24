@@ -7,11 +7,11 @@ import withAuth from '../components/withAuth';
 import ImageCard from "../components/ImageCard";
 import EventCard from "../components/EventCard";
 import Wrapper from "../components/Wrapper";
+import logo from "../imgs/WW_logo_stay_go_invert.png";
 import "./Stay.css";
-
 class Stay extends Component {
     state = {
-        showLoadingScreen: true,
+        showLoadingScreen: false,
         username: "",
         zipcode: "",
         restaurantsRow1: [],
@@ -20,11 +20,7 @@ class Stay extends Component {
         eventsRow2: []
     }
     componentDidMount() {
-        setTimeout(() => {
-            this.setState({
-                showLoadingScreen: false
-            });
-        }, 2000)
+        
         const b = this;
         API.getUser(this.props.user.id).then(res => {
             this.setState({
@@ -126,24 +122,15 @@ class Stay extends Component {
 
         return (
             <div>
-                <div className="background">
+                <div className="stay-background">
                     <Navbar inverse collapseOnSelect>
                         <Navbar.Header>
                             <Navbar.Brand>
-                                <a className="pageTitle" href="#brand">Stay</a>
+                                <a  href="/home"><img className="stay-logo" alt="logo" src={logo}/></a>
                             </Navbar.Brand>
                             <Navbar.Toggle />
                         </Navbar.Header>
                         <Navbar.Collapse>
-                            <Nav>
-                                <NavDropdown eventKey={3} title={this.state.username} id="basic-nav-dropdown">
-                                    <MenuItem eventKey={3.1}>Drop it</MenuItem>
-                                    <MenuItem eventKey={3.2}>To the Floor</MenuItem>
-                                    <MenuItem eventKey={3.3} href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Drop it Like it's Hot</MenuItem>
-                                    <MenuItem divider />
-                                    <MenuItem eventKey={3.3}>Separated link</MenuItem>
-                                </NavDropdown>
-                            </Nav>
                             <Nav pullRight>
                                 <NavItem eventKey={2} href="#">
                                     <Link to="/" role="button" className="">
@@ -158,6 +145,7 @@ class Stay extends Component {
     
     
                 <div className="container">
+                <h1 className="pageTitle">Stay</h1>
                         <div className="yelp-cards">
                             <h2>Places to Eat:</h2>
                             <div className="row">

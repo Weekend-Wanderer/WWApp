@@ -11,7 +11,7 @@ import {SearchZip} from "../components/gotopage";
 import {Wrapper} from "../components/Wrapper";
 import {FlightCard} from "../components/FlightCard";
 import {MeetupEventCard} from "../components/MeetupEventCard";
-
+import logo from "../imgs/WW_logo_thicc.png";
 
 const Auth = new AuthService();
 
@@ -131,7 +131,8 @@ class GoTo extends Component {
     render() {        
         return (
             <Wrapper>
-                <h1>GO!</h1>
+                <a  href="/home"><img className="stay-logo" alt="logo" src={logo}/></a>
+                <h1>Go</h1>
                 <SearchZip searchzipcode={this.state.myzipcode} buttonhandle={this.handleAPIS} handleinput={this.handleinput}/>
             <div className="parallax">
             <div className="parallax__group">
