@@ -125,8 +125,9 @@ class Signup extends Component {
                       type="text"
                       id="zipcode"
                       onChange={this.handleChange}></input>
-                    <button className="btn btn-primary search-button" onClick={this.getZipcode}><span className="glyphicon glyphicon-search"/></button>
+                      <button className="btn btn-primary search-button" onClick={this.getZipcode}><span className="glyphicon glyphicon-search"/></button>
                   </div>
+                  
                   <button type="submit" className="btn btn-success">Signup</button>
                 </form>
                 <hr />
