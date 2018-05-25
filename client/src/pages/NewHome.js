@@ -28,7 +28,7 @@ class NewHome extends Component {
             this.setState({
                 showLoadingScreen: false
             });
-        }, 100)
+        }, 6000)
     }
 
     loadingComp = () => {
