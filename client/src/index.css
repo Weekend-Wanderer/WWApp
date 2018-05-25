@@ -62,11 +62,18 @@ body {
   padding: 15px;
   border: solid #dcdcdc 1px;
   border-radius: 5px;
+  color: white;
+}
+.signup-login-button:hover {
+  background: white;
+  color: black;
 }
 .signup-login-button:hover{
   text-decoration: none;
   background: white;
 }
+
+
 
 .navbar-default {
   display: none;
